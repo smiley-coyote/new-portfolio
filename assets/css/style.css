@@ -1,0 +1,65 @@
+body {
+  background-color: #DBFDFF;
+  font-family: 'Comfortaa', cursive;
+}
+
+.wrapper {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.nav {
+  position: relative;
+  float: right;
+  margin-right: 200px;
+  font-size: 50px;
+  color: white;
+  animation-name: fadeOut;
+  animation-delay: 1s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;  
+}
+
+.nav li {
+  list-style-type: none;
+  padding: 50px;
+}
+
+#grass {
+  transform: translateY(200px);
+  animation-name: fadeOut;
+  animation-delay: 1s;
+  animation-duration: .5s;
+  animation-fill-mode: forwards;  
+}
+
+#tree {
+  position: absolute;
+  transform: translate(-1300px, -1850px) scale(2);
+  z-index: -1;
+  animation-name: zoomOut;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 1s;
+  animation-direction: normal; 
+  animation-fill-mode: forwards;  
+}
+
+@keyframes zoomOut {
+  0%{
+    transform: translate(-1300px, -1850px) scale(2);
+  }
+  100%{
+    transform: translate(-2300px, -1700px) scale(.305);
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
