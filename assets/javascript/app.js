@@ -54,8 +54,9 @@ function navButton(x) {
   var p = pagePosition;
   var goTo = new Function('a', 'b', 'return a + "To" + b');
   var navigate = goTo(p, x);
+  // From main page ==================
   if(navigate === "mainToBlog"){
-    alert("Main -> Blog")
+    mainToBlog();
   }
   if(navigate === "mainToMyWork"){
     mainToMyWork();
@@ -66,11 +67,24 @@ function navButton(x) {
   if(navigate === "mainToAboutMe"){
     alert("Main -> About Me")
   }
+  // From My Work page ==================
+  if(navigate === "myWorkToBlog"){
+    alert("My Work -> Blog")
+  }
+  if(navigate === "myWorkToAboutMe"){
+    alert("My Work -> About Me")
+  }
+  if(navigate === "myWorkToContact"){
+    alert("My Work -> Contact")
+  }
+  // From Blog page ==================
+  // From Contact page ==================
+  // From About Me page ==================
 }
 
 function mainToMyWork() {
-  pagePosition = "my-work";
-  document.getElementById("tree").style.animation = "zoomOut 2s ease-out normal forwards";
+  pagePosition = "myWork";
+  document.getElementById("tree").style.animation = "treeZoomOut 2s ease-out normal forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav").style.animation = "navShrink 2s ease-in-out forwards";
   document.getElementById ("portfolio").style.display = "block";
@@ -89,6 +103,19 @@ for (var i = 0; i < ele.length; i++ ) {
 }
 
 function mainToBlog(){
-
+  pagePosition = "blog";
+  document.getElementById("tree").style.animation = "treeZoomOutMoveDown 8s ease-out normal forwards";
+  document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
+  document.getElementById ("nav").style.animation = "navShrink 2s ease-in-out forwards";
+  document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
+  document.getElementById("cloud1").style.animation = "floatRight1 120s linear 1s forwards";
+  document.getElementById("cloud2").style.animation = "floatRight1 220s linear 1s forwards";
+  document.getElementById("cloud3").style.animation = "floatRight1 150s linear 1s forwards";
+  document.getElementById("cloud4").style.animation = "floatRight1 220s linear 1s forwards";
+  document.getElementById("cloud5").style.animation = "floatRight1 200s linear 1s forwards";
+  var ele = document.getElementsByClassName('nav-button');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.animationPlayState = "running";
+}
 }
 

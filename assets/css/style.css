@@ -89,6 +89,26 @@ body {
   z-index: -1;
 }
 
+@keyframes treeZoomOut {
+  0%{
+    transform: translate(-1300px, -1850px) scale(2);
+  }
+  100%{
+    transform: translate(-2300px, -1700px) scale(.305);
+  }
+}
+@keyframes treeZoomOutMoveDown {
+  0%{
+    transform: translate(-1300px, -1850px) scale(2);
+  }
+  25%{
+    transform: translate(-2300px, -1700px) scale(.305);
+  }
+  100%{
+    transform: translate(-2300px, 1700px) scale(.305);
+  }
+}
+
 #portfolio-header{
   font-family: 'Nunito Sans', sans-serif;
   position: absolute;
@@ -195,14 +215,7 @@ body {
   }
 }
 
-@keyframes zoomOut {
-  0%{
-    transform: translate(-1300px, -1850px) scale(2);
-  }
-  100%{
-    transform: translate(-2300px, -1700px) scale(.305);
-  }
-}
+
 
 @keyframes fadeOut {
   0%{
@@ -249,6 +262,9 @@ body {
   bottom: 100px;
   left: 0px;
 }
+
+
+
 
 
 #nav li:hover {
