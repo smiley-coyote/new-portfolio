@@ -10,24 +10,45 @@ body {
   overflow: hidden;
 }
 
-.nav {
+#nav {
   position: relative;
   float: right;
   margin-right: 200px;
   font-size: 50px;
   color: white;
-  animation-name: fadeOut;
-  animation-delay: 1s;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;  
+  animation: fadeOut .5s;
+  animation: navShrink 2s;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;  
+  animation-timing-function: ease-in-out;
 }
 
-.nav li {
+@keyframes navShrink {
+  55% {
+    border-left: 0px;
+  }
+  100%{
+    transform: scale(.5) translate(450px, -200px);
+    color: black;
+    border-left: 5px solid black;
+  }
+}
+
+.nav-button {
   list-style-type: none;
   padding: 50px;
+  animation: paddingChange 2s;
+  animation-play-state: paused;
+  animation-fill-mode: forwards;
 }
 
-.upper-nav{
+@keyframes paddingChange {
+  100%{
+    padding: 10px;
+  }
+}
+
+#upper-nav{
   opacity: 0;
   position: absolute;
   top: 50px;
@@ -35,23 +56,26 @@ body {
   border-left: 3px solid rgb(100, 100, 100);
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-direction: normal; 
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+  animation-play-state: paused;  
 }
-.upper-nav li {
+#upper-nav li {
   position: relative;
   list-style-type: none;
   padding: 5px;
 }
 
-.portfolio {
+#portfolio {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-direction: normal; 
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+  animation-play-state: paused;  
+  display: none;
 }
 
 @keyframes fadeIn{
@@ -65,10 +89,28 @@ body {
 
 #grass {
   transform: translateY(200px);
-  animation-name: fadeOut;
-  animation-delay: 1s;
-  animation-duration: .5s;
-  animation-fill-mode: forwards;  
+  animation: fadeOut .5s forwards paused;
+  animation: grassWind 20s forwards infinite running;
+}
+
+@keyframes grassWind {
+  25%{
+    transform: rotate(-2deg) translateY(200px);
+    transform-origin: bottom;
+  }
+  50%{
+    transform: rotate(0deg) translateY(200px);
+    transform-origin: bottom;
+  }
+  75%{
+    transform: rotate(-1.5deg) translateY(200px);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: rotate(0deg) translateY(200px);
+    transform-origin: bottom;
+  }
+
 }
 
 #tree {
@@ -79,12 +121,13 @@ body {
   animation-name: zoomOut;
   animation-duration: 2s;
   animation-timing-function: ease-out;
-  animation-delay: 1s;
   animation-direction: normal; 
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+  animation-play-state: paused;  
 }
 
-.portfolio-header{
+#portfolio-header{
+  font-family: 'Nunito Sans', sans-serif;
   position: absolute;
   top: 20px;
   left: 40px;
@@ -92,10 +135,13 @@ body {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 2s;
-  animation-delay: 3s;
+  animation-delay: 2s;
   animation-direction: normal; 
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+  animation-play-state: paused;  
 }
+
+
 
 .project-card {
   position: absolute;
@@ -108,6 +154,7 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  
 }
 
 
@@ -172,7 +219,7 @@ body {
   animation: windWobble1 15s ease-in-out 1.2s infinite alternate;
 }
 
-.portfolio img {
+#portfolio img {
   width: 200px;
   height: 110px;
 }
@@ -226,7 +273,8 @@ body {
   left: 20px;
   animation-name: floatRight1;
   animation-duration: 120s;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-play-state: paused;
 }
 #cloud2{
   opacity: 0;
@@ -235,7 +283,8 @@ body {
   right: 20px;
   animation-name: floatRight1;
   animation-duration: 220s;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-play-state: paused;
 }
 #cloud3{
   opacity: 0;
@@ -244,7 +293,8 @@ body {
   left: 200px;
   animation-name: floatRight1;
   animation-duration: 150s;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-play-state: paused;
 }
 #cloud4{
   opacity: 0;
@@ -253,7 +303,8 @@ body {
   left: 400px;
   animation-name: floatRight1;
   animation-duration: 220s;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-play-state: paused;
 }
 #cloud5{
   opacity: 0;
@@ -262,14 +313,23 @@ body {
   left: 0px;
   animation-name: floatRight1;
   animation-duration: 200s;
-  animation-delay: 2s;
+  animation-delay: 1s;
+  animation-play-state: paused;
+}
+
+
+#nav-mywork:hover {
+  color: yellow;
+  cursor: pointer;
 }
 
 
 @keyframes floatRight1{
   0% {
-    opacity: 1;
     transform: translateX(0px);
+  }
+  2%{
+    opacity: 1;
   }
 
   
