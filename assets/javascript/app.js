@@ -58,7 +58,7 @@ function mainToMyWork() {
   document.getElementById ("portfolio").style.display = "block";
   document.getElementById ("portfolio").style.animationPlayState = "running";
 
-  document.getElementById("grass").style.opacity = "0";
+  document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
   document.getElementById("portfolio-header").style.animationPlayState = "running";
   document.getElementById("cloud1").style.animationPlayState = "running";
   document.getElementById("cloud2").style.animationPlayState = "running";

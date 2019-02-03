@@ -89,7 +89,6 @@ body {
 
 #grass {
   transform: translateY(200px);
-  animation: fadeOut .5s forwards paused;
   animation: grassWind 20s forwards infinite running;
 }
 
