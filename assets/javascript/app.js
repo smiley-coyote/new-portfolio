@@ -62,7 +62,7 @@ function navButton(x) {
     mainToMyWork();
   }
   if(navigate === "mainToContact"){
-    alert("Main -> Contact")
+    mainToContact();
   }
   if(navigate === "mainToAboutMe"){
     alert("Main -> About Me")
@@ -105,14 +105,34 @@ for (var i = 0; i < ele.length; i++ ) {
 function mainToBlog(){
   pagePosition = "blog";
   document.getElementById("tree").style.animation = "treeZoomOutMoveDown 8s ease-out normal forwards";
+  document.body.style.animation="toSkyBlue 5s linear 2s forwards";
+  document.getElementById("clouds-layer1").style.animation = "allcloudsmovedown 2s linear 2.5s forwards";
+  document.getElementById("clouds-layer2").style.animation = "allcloudsmovedown 3.5s linear 2.5s forwards";
+  document.getElementById("clouds-layer3").style.animation = "allcloudsmovedown 5s linear 2.5s forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav").style.animation = "navShrink 2s ease-in-out forwards";
   document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
-  document.getElementById("cloud1").style.animation = "floatRight1 120s linear 1s forwards";
-  document.getElementById("cloud2").style.animation = "floatRight1 220s linear 1s forwards";
-  document.getElementById("cloud3").style.animation = "floatRight1 150s linear 1s forwards";
-  document.getElementById("cloud4").style.animation = "floatRight1 220s linear 1s forwards";
-  document.getElementById("cloud5").style.animation = "floatRight1 200s linear 1s forwards";
+  document.getElementById("cloud1").style.animation = "floatRight1 120s linear 5s forwards";
+  document.getElementById("cloud2").style.animation = "floatRight1 220s linear 5s forwards";
+  document.getElementById("cloud3").style.animation = "floatRight1 150s linear 5s forwards";
+  document.getElementById("cloud4").style.animation = "floatRight1 220s linear 5s forwards";
+  document.getElementById("cloud5").style.animation = "floatRight1 200s linear 5s forwards";
+  var ele = document.getElementsByClassName('nav-button');
+for (var i = 0; i < ele.length; i++ ) {
+    ele[i].style.animationPlayState = "running";
+}
+}
+
+function mainToContact() {
+  pagePosition = "blog";
+  document.getElementById("tree").style.animation = "treeZoomOutMoveUp 3s ease-out normal forwards";
+  document.getElementById("ground").style.animation = "groundUp 3s ease-out normal forwards";
+  document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
+  document.getElementById ("nav-list").style.animation = "shrinkHeight 1s ease-in-out forwards";
+  document.getElementById ("nav").style.animation = "navShrink2 3.5s ease-in-out forwards";
+  document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
+  document.getElementById("contact").style.animation = "fadeIn 2s forwards 3s running";
+  document.getElementById("contact").style.display = "block";
   var ele = document.getElementsByClassName('nav-button');
 for (var i = 0; i < ele.length; i++ ) {
     ele[i].style.animationPlayState = "running";
