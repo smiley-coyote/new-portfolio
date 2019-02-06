@@ -86,6 +86,9 @@ function navButton(x) {
 
 function mainToMyWork() {
   pagePosition = "myWork";
+  document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
+  document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
+  document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-mywork").style.color = "yellow";
   document.getElementById("tree").style.animation = "treeZoomOut 2s ease-out normal forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
@@ -107,11 +110,13 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function mainToAboutMe(){
   pagePosition = "AboutMe";
+  document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
+  document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-aboutme").style.color = "yellow";
    document.getElementById("about-me").style.display = "block";
    document.getElementById("about-me").style.animation = "fadeIn 2s linear 4s forwards";
   document.getElementById("tree").style.animation = "treeZoomOutMoveDown 3.5s ease-out normal forwards";
-  document.body.style.animation="toSkyBlue 5s linear 2s forwards";
+  document.body.style.animation="toSkyBlue 2s linear 2s forwards";
   document.getElementById("clouds-layer1").style.animation = "allcloudsmovedown 2s linear 1.5s forwards";
   document.getElementById("clouds-layer2").style.animation = "allcloudsmovedown 3s linear 1.5s forwards";
   document.getElementById("clouds-layer3").style.animation = "allcloudsmovedown 4s linear 1.5s forwards";
@@ -130,7 +135,8 @@ for (var i = 0; i < ele.length; i++ ) {
 }
 
 function mainToContact() {
-  pagePosition = "blog";
+  pagePosition = "Blog";
+  document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-contact").style.color = "yellow";
   document.getElementById("tree").style.animation = "treeZoomOutMoveUp 3s ease-out normal forwards";
   document.getElementById("ground").style.animation = "groundUp 3s ease-out normal forwards";

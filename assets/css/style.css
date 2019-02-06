@@ -14,9 +14,27 @@ body {
 }
 
 
+#forest-image{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -6;
+  filter: blur(6px);
+}
+
+#forest-image img{
+  position: relative;
+  margin: 0;
+  height: 1200px;
+  width: auto;
+  opacity: .7;
+}
+
+
+
 @keyframes toSkyBlue {
   100%{
-    background-color: rgb(83, 244, 255);
+    background-color: rgb(97, 243, 253);
   }
 }
 
@@ -68,13 +86,14 @@ body {
 
 #ground {
   position: absolute;
-  background-color: rgb(172, 136, 82);
-  border-top: 5px solid rgb(71, 61, 45);
+  
+  background-image: linear-gradient(rgb(71, 71, 71), rgb(34, 34, 34));
+  border-top: 10px solid rgb(78, 207, 89);
   left: 0px;
   bottom: -820px;
   width: 4000px;
   height: 800px;
-  z-index: -2;
+  z-index: -3;
 }
 
 #ground img {
@@ -227,19 +246,19 @@ body {
 
 @keyframes grassWind {
   25%{
-    transform: rotate(-2deg) translateY(200px);
+    transform: skewX(3deg) translateY(200px);
     transform-origin: bottom;
   }
   50%{
-    transform: rotate(0deg) translateY(200px);
+    transform: skewX(0deg) translateY(200px);
     transform-origin: bottom;
   }
   75%{
-    transform: rotate(-1.5deg) translateY(200px);
+    transform: skewX(2deg) translateY(200px);
     transform-origin: bottom;
   }
   100%{
-    transform: rotate(0deg) translateY(200px);
+    transform: skewX(0deg) translateY(200px);
     transform-origin: bottom;
   }
 
@@ -261,9 +280,26 @@ body {
   position: absolute;
   transform: translate(-1300px, -1850px) scale(2);
   /* transform: translate(-2300px, -1700px) scale(.340); */
-  z-index: -1;
+  z-index: -2;
   /* transform: translate(-2200px, -2400px) scale(.5); */
 }
+
+#tree-bark {
+  position: absolute;
+  top: -10px;
+  z-index: -1;
+  width: 50%;
+  height: 110%;
+  opacity: .4;
+  filter: blur(2px);
+}
+
+@keyframes barkFade{
+  100%{
+    opacity: 0;
+  }
+}
+
 
 @keyframes treeZoomOut {
   0%{
