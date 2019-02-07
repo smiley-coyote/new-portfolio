@@ -92,15 +92,7 @@ body {
   }
 }
 
-@keyframes navShrink2 {
-  55% {
-    border-left: 0px;
-  }
-  100%{
-    transform: scale(.6) translate(-200px, -110px);
-    color: black;
-  }
-}
+
 
 /* @keyframes leftBorder {
   100%{
@@ -135,6 +127,25 @@ body {
   }
 }
 
+@keyframes groundDown {
+  0%{
+    transform: translateY(-680px)
+  }
+  100%{
+    transform: translateY(680px)
+  }
+}
+
+@keyframes groundDown2 {
+  0%{
+    transform: translateY(-680px)
+  }
+  100%{
+    transform: translateY(0px)
+  }
+}
+
+
 @keyframes navShrink {
 
   100%{
@@ -143,6 +154,29 @@ body {
     
   }
 }
+
+@keyframes navShrink2 {
+  55% {
+    border-left: 0px;
+  }
+  100%{
+    transform: scale(.6) translate(-200px, -110px);
+    color: black;
+  }
+}
+
+@keyframes navShrink3 {
+  0%{
+    color: black;
+    transform: scale(.5) translate(450px, -200px)
+  }
+  100%{
+    color: black;
+    transform: scale(.6) translate(-200px, -110px);
+  }
+}
+
+
 
 .nav-button {
   list-style-type: none;
@@ -271,11 +305,11 @@ body {
 @keyframes fadeIn{
   0%{
     opacity: 0;
-   
+   display: block;
   }
   100%{
     opacity: 1;
-  
+    
   }
 }
 
@@ -342,7 +376,7 @@ body {
 }
 
 
-@keyframes treeZoomOut {
+@keyframes treeMainToMyWork {
   0%{
     transform: translate(-1300px, -1850px) scale(2);
   }
@@ -370,6 +404,50 @@ body {
 
   100%{
     transform: translate(-2200px, -2400px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMoveDown {
+  0%{
+    transform: translate(-2300px, -1700px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2300px, -1000px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMoveUp {
+  0%{
+    transform: translate(-2300px, -1700px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2200px, -2400px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToAboutMe {
+  0%{
+    transform: translate(-2200px, -2400px) scale(.5);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2300px, -1000px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToMyWork {
+  0%{
+    transform: translate(-2200px, -2400px) scale(.5);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2300px, -1700px) scale(.305);
     filter: blur(0px);
   }
 }
@@ -492,6 +570,12 @@ body {
   }
 }
 
+@keyframes fadeOut2{
+  0%{
+    opacity: 0;
+  }
+}
+
 @keyframes removeBorder {
   100% {
     border: 0px;
@@ -525,7 +609,7 @@ body {
 }
 
 .contact-card:hover{
-  animation: grow .5s ease-out forwards;
+  animation: grow .2s ease-out forwards;
 }
 
 @keyframes grow {
@@ -645,7 +729,7 @@ body {
 
 
 #nav li:hover {
-  color: yellow;
+  color: yellow !important;
   cursor: pointer;
 }
 
