@@ -86,6 +86,9 @@ function navButton(x) {
 
 function mainToMyWork() {
   pagePosition = "myWork";
+  document.getElementById ("nav").style.border = "none";
+  document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
+  document.getElementById ("nav").style.borderLeft = "8px solid black";
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
@@ -110,6 +113,9 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function mainToAboutMe(){
   pagePosition = "AboutMe";
+  document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
+  document.getElementById ("nav").style.border = "none";
+  document.getElementById ("nav").style.borderLeft = "8px solid black";
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-aboutme").style.color = "yellow";
@@ -136,13 +142,15 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function mainToContact() {
   pagePosition = "Blog";
+  document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
+  document.getElementById ("nav").style.border = "none";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-contact").style.color = "yellow";
   document.getElementById("tree").style.animation = "treeZoomOutMoveUp 3s ease-out normal forwards";
   document.getElementById("ground").style.animation = "groundUp 3s ease-out normal forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
-  document.getElementById ("nav").style.animation = "navShrink2 2.5s ease-in-out forwards";
+  document.getElementById ("nav").style.animation = "navShrink2 3s ease-in-out forwards";
 
   document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 3s running";

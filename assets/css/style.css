@@ -13,13 +13,33 @@ body {
   overflow: hidden;
 }
 
+#main-header{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+}
+
+.border-box {
+  position: relative;
+  margin-left: 80px;
+  margin-top: 80px;
+  width: 400px;
+  height: 80px;
+  border-bottom: 3px solid black;
+}
+
+.border-box h1{
+  float: left;
+  font-size: 70px;
+}
 
 #forest-image{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: -5px;
+  left: -10px;
   z-index: -6;
-  filter: blur(6px);
+  filter: blur(7px);
 }
 
 #forest-image img{
@@ -27,7 +47,7 @@ body {
   margin: 0;
   height: 1200px;
   width: auto;
-  opacity: .7;
+  opacity: .6;
 }
 
 
@@ -47,9 +67,14 @@ body {
 #nav {
   position: relative;
   float: right;
-  margin-right: 200px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  padding-left: 20px;
+  margin-right: 230px;
+  margin-top: 100px;
   font-size: 50px;
   color: white;
+  border: 8px solid white;
 }
 
 #nav-list {
@@ -72,16 +97,16 @@ body {
     border-left: 0px;
   }
   100%{
-    transform: scale(.5) translate(-200px, -50px);
+    transform: scale(.6) translate(-200px, -110px);
     color: black;
   }
 }
 
-@keyframes leftBorder {
+/* @keyframes leftBorder {
   100%{
     border-left: 2px solid black;
   }
-}
+} */
 
 
 #ground {
@@ -111,13 +136,11 @@ body {
 }
 
 @keyframes navShrink {
-  55% {
-    border-left: 0px;
-  }
+
   100%{
     transform: scale(.5) translate(450px, -200px);
     color: black;
-    border-left: 5px solid black;
+    
   }
 }
 
@@ -136,8 +159,19 @@ body {
 }
 
 #about-me{
+  position: absolute;
   display: none;
+  top: 0px;
+  left: 0px;
   opacity: 0;
+}
+
+#about-me p {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 #about-me-profile-pic{
@@ -154,9 +188,10 @@ body {
 
 #about-me-header{
   position: absolute;
+  width: 400px;
   left: 50px;
-  top: 10px;
-  font-size: 1.5em;
+  top: 50px;
+  font-size: 3em;
 }
 
 #about-me-window {
@@ -204,11 +239,14 @@ body {
 }
 
 #skills-header {
- padding-top: 5px;
+ padding-top: 15px;
  padding-left: 10px;
+ font-size: 1.5em;
+
 }
 
 #skills-list {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -233,9 +271,11 @@ body {
 @keyframes fadeIn{
   0%{
     opacity: 0;
+   
   }
   100%{
     opacity: 1;
+  
   }
 }
 
@@ -282,6 +322,7 @@ body {
   /* transform: translate(-2300px, -1700px) scale(.340); */
   z-index: -2;
   /* transform: translate(-2200px, -2400px) scale(.5); */
+  filter: blur(8px);
 }
 
 #tree-bark {
@@ -291,7 +332,7 @@ body {
   width: 50%;
   height: 110%;
   opacity: .4;
-  filter: blur(2px);
+  filter: blur(8px);
 }
 
 @keyframes barkFade{
@@ -307,6 +348,7 @@ body {
   }
   100%{
     transform: translate(-2300px, -1700px) scale(.305);
+    filter: blur(0px);
   }
 }
 @keyframes treeZoomOutMoveDown {
@@ -328,15 +370,16 @@ body {
 
   100%{
     transform: translate(-2200px, -2400px) scale(.5);
+    filter: blur(0px);
   }
 }
 
 #portfolio-header{
   font-family: 'Nunito Sans', sans-serif;
   position: absolute;
-  top: -10px;
-  left: 40px;
-  font-size: 30px;
+  left: 50px;
+  top: 50px;
+  font-size: 3em;
   opacity: 0;
 }
 
@@ -445,6 +488,13 @@ body {
   }
   100%{
     opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes removeBorder {
+  100% {
+    border: 0px;
   }
 }
 
@@ -456,8 +506,8 @@ body {
 #contact-header {
   position: absolute;
   left: 50px;
-  top: 0px;
-  font-size: 2em;
+  top: 50px;
+  font-size: 3em;
 }
 
 
@@ -472,6 +522,16 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.contact-card:hover{
+  animation: grow .5s ease-out forwards;
+}
+
+@keyframes grow {
+  100%{
+    transform: scale(1.1);
+  }
 }
 
 
