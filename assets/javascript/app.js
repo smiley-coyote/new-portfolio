@@ -114,7 +114,8 @@ function mainToMyWork() {
   document.getElementById ("nav").style.border = "none";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
   document.getElementById ("nav").style.borderLeft = "8px solid black";
-
+  document.getElementById("butterfly").style.display = "none";
+  document.getElementById("grass3").style.animation = "fadeOut .2s linear forwards";
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-mywork").style.color = "yellow";
@@ -139,6 +140,8 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function mainToAboutMe(){
   pagePosition = "AboutMe";
+  document.getElementById("butterfly").style.display = "none";
+  document.getElementById("grass3").style.animation = "fadeOut .5s linear forwards";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
   document.getElementById ("nav").style.border = "none";
   document.getElementById ("nav").style.borderLeft = "8px solid black";
@@ -169,6 +172,8 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function mainToContact() {
   pagePosition = "Contact";
+  document.getElementById("butterfly").style.display = "none";
+  document.getElementById("grass3").style.visibility = "hidden";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
   document.getElementById ("nav").style.border = "none";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
@@ -178,10 +183,8 @@ function mainToContact() {
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
   document.getElementById ("nav").style.animation = "navShrink2 3s ease-in-out forwards";
-
-  document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
-
-  document.getElementById("grass2").style.animation = "fadeOut .5s forwards running";
+  document.getElementById("grass").style.visibility = "hidden";
+  document.getElementById("grass2").style.visibility = "hidden";
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 3s running";
   document.getElementById("contact").style.display = "block";
   var ele = document.getElementsByClassName('nav-button');

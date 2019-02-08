@@ -75,6 +75,20 @@ body {
   font-size: 50px;
   color: white;
   border: 8px solid white;
+  animation: navEnterScreen 1.5s ease-out forwards;
+}
+
+@keyframes navEnterScreen{
+  0%{
+    filter: blur(8px);
+    transform: scale(1.2);
+   
+  }
+  100%{
+    filter: blur(0px);
+    transform: scale(1);
+  
+  }
 }
 
 #nav-list {
@@ -322,31 +336,36 @@ body {
 @keyframes flying {
   0%{
     transform: translate(-300px, 400px);
+    filter: blur(5px);
   }
   12.5%{
-    transform: translate(-150px, 300px);
+    transform: translate(-120px, 300px);
   }
   25%{
-    transform: translate(-150px, 300px);
+    transform: translate(-120px, 300px);
   }
   37.5%{
-    transform: translate(100px, 100px);
+    transform: translate(130px, 100px);
+    filter: blur(5px);
   }
   50%{
-    transform: translate(200px, 50px);
+    transform: translate(230px, 50px) scale(1.1);
+    filter: blur(0px);
   }
   62.5%{
-    transform: translate(200px, 50px);
+    transform: translate(230px, 50px) scale(1.1);
+    filter: blur(0px);
   }
   75%{
-    transform: translate(450px, -100px);
+    transform: translate(480px, -100px) scale(.7);
+    filter: blur(7px);
   }
   87.5%{
-    transform: translate(510px, -300px);
+    transform: translate(540px, -300px);
     opacity: 1;
   }
   100%{
-    transform: translate(510px, -300px);
+    transform: translate(540px, -300px);
   }
   
 }
@@ -407,6 +426,13 @@ body {
   position: absolute;
   transform: translate(-590px, 200px);
   animation: grassWind2 18s forwards infinite running;
+}
+
+#grass3 {
+  position: absolute;
+  transform: translate(-630px, 300px) scale(.7);
+  filter: blur(5px);
+ 
 }
 
 
@@ -614,11 +640,11 @@ body {
 }
 
 .project-card .project-text {
-  width: 220px;
+  width: 100%;
   position: absolute;
   text-align: center;
   bottom: 40%;
-  right: -.3%;
+  right: -4%;
   color: rgb(250, 250, 250);
   padding: 10px;
   visibility: hidden;
@@ -628,23 +654,39 @@ body {
    -1px 1px 0 #000,
     1px 1px 0 #000;
 }
-.project-card h3 {
+
+/* .project-text:hover {
+  color: yellow;
+  animation: textGrow .5s forwards;
+} */
+
+@keyframes textGrow {
+  100%{
+    transform: scale(1.1);
+  }
+}
+#hidden-title {
   background-color: #E2DAFF;
   color: black;
   padding: 10px;
   text-align: center;
-  bottom: 20px;
+  bottom: 0px;
+  right: 35%;
   margin-bottom: 0;
   font-family: 'Georgia', Times, Times New Roman, serif;
-  width: 100%;
+  width: 45px !important;
   position: absolute;
   margin-top: 20%;
   font-size: .85em;
+  border-radius: 3px;
 }
 
-.project-card h3:hover {
+
+
+#hidden-title:hover {
   background-color: #7C48B2;
-  color: white;
+  color: rgb(255, 242, 65);
+  animation: textGrow .2s linear forwards;
 }
 
 .project-card:hover .project-text{
