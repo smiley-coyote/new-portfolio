@@ -124,6 +124,7 @@ function mainToMyWork() {
   document.getElementById ("portfolio").style.display = "block";
   document.getElementById ("portfolio").style.animation = "fadeIn 2s linear 2s forwards";
   document.getElementById("grass").style.animation = "grassShrinkMoveOut 1s forwards running";
+  document.getElementById("grass2").style.animation = "grassShrinkMoveOut2 1s forwards running";
   document.getElementById("portfolio-header").style.animation = "fadeIn 2s linear 2s forwards";
   document.getElementById("cloud1").style.animation = "floatRight1 120s linear 1s forwards";
   document.getElementById("cloud2").style.animation = "floatRight1 220s linear 1s forwards";
@@ -154,6 +155,7 @@ function mainToAboutMe(){
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav").style.animation = "navShrink 1s ease-in-out forwards";
   document.getElementById("grass").style.animation = "grassMoveOut .5s forwards running";
+  document.getElementById("grass2").style.animation = "grassMoveOut2 .5s forwards running";
   document.getElementById("cloud1").style.animation = "floatRight1 120s linear 4s forwards";
   document.getElementById("cloud2").style.animation = "floatRight1 220s linear 4s forwards";
   document.getElementById("cloud3").style.animation = "floatRight1 150s linear 4s forwards";
@@ -178,6 +180,8 @@ function mainToContact() {
   document.getElementById ("nav").style.animation = "navShrink2 3s ease-in-out forwards";
 
   document.getElementById("grass").style.animation = "fadeOut .5s forwards running";
+
+  document.getElementById("grass2").style.animation = "fadeOut .5s forwards running";
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 3s running";
   document.getElementById("contact").style.display = "block";
   var ele = document.getElementsByClassName('nav-button');
@@ -294,3 +298,5 @@ function contactToMyWork() {
   document.getElementById ("portfolio").style.display = "block";
   document.getElementById ("portfolio").style.animation = "fadeIn 2s linear 2s forwards";
 }
+
+

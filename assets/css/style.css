@@ -313,10 +313,102 @@ body {
   }
 }
 
+#butterfly {
+  position: absolute;
+  
+  animation: flying 8s linear forwards;
+}
+
+@keyframes flying {
+  0%{
+    transform: translate(-300px, 400px);
+  }
+  12.5%{
+    transform: translate(-150px, 300px);
+  }
+  25%{
+    transform: translate(-150px, 300px);
+  }
+  37.5%{
+    transform: translate(100px, 100px);
+  }
+  50%{
+    transform: translate(200px, 50px);
+  }
+  62.5%{
+    transform: translate(200px, 50px);
+  }
+  75%{
+    transform: translate(450px, -100px);
+  }
+  87.5%{
+    transform: translate(510px, -300px);
+    opacity: 1;
+  }
+  100%{
+    transform: translate(510px, -300px);
+  }
+  
+}
+#butterfly img {
+  position: absolute;
+  height: 400px;
+  width: auto;
+
+}
+
+#butterfly1 img{
+  opacity: 1;
+  animation: wingflap .5s linear infinite running;
+}
+
+#butterfly2 img{
+  opacity: 0;
+  animation: wingflap2 .5s linear infinite running;
+}
+
+@keyframes wingflap {
+  25%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  75%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes wingflap2 {
+  25%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+
 #grass {
   transform: translateY(200px);
   animation: grassWind 20s forwards infinite running;
 }
+
+#grass2 {
+  position: absolute;
+  transform: translate(-590px, 200px);
+  animation: grassWind2 18s forwards infinite running;
+}
+
 
 @keyframes grassWind {
   25%{
@@ -338,15 +430,47 @@ body {
 
 }
 
+@keyframes grassWind2 {
+  25%{
+    transform: skewX(3deg) translate(-590px, 200px);
+    transform-origin: bottom;
+  }
+  50%{
+    transform: skewX(0deg) translate(-590px, 200px);
+    transform-origin: bottom;
+  }
+  75%{
+    transform: skewX(2deg) translate(-590px, 200px);
+    transform-origin: bottom;
+  }
+  100%{
+    transform: skewX(0deg) translate(-590px, 200px);
+    transform-origin: bottom;
+  }
+
+}
+
 @keyframes grassMoveOut {
   100%{
     transform: translateY(800px);
   }
 }
 
+@keyframes grassMoveOut2 {
+  100%{
+    transform: translate(-590px, 800px);
+  }
+}
+
 @keyframes grassShrinkMoveOut {
   100%{
     transform: translateY(800px) scale(.5);
+  }
+}
+
+@keyframes grassShrinkMoveOut2 {
+  100%{
+    transform: translate(-590px, 800px) scale(.5);
   }
 }
 
@@ -472,7 +596,6 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
 }
 
 .project-card:hover{
@@ -481,6 +604,62 @@ body {
   animation-fill-mode: forwards;
 }
 
+.project-card img {
+  transition-duration: .4s;
+}
+
+.project-card:hover img {
+  -webkit-filter: blur(4px); /* Chrome, Safari, Opera */
+    filter: blur(3px);
+}
+
+.project-card .project-text {
+  width: 220px;
+  position: absolute;
+  text-align: center;
+  bottom: 40%;
+  right: -.3%;
+  color: rgb(250, 250, 250);
+  padding: 10px;
+  visibility: hidden;
+  text-shadow:
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+   -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.project-card h3 {
+  background-color: #E2DAFF;
+  color: black;
+  padding: 10px;
+  text-align: center;
+  bottom: 20px;
+  margin-bottom: 0;
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  width: 100%;
+  position: absolute;
+  margin-top: 20%;
+  font-size: .85em;
+}
+
+.project-card h3:hover {
+  background-color: #7C48B2;
+  color: white;
+}
+
+.project-card:hover .project-text{
+  visibility: visible;
+}
+
+#hidden-title{
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+}
+
+.project-card:hover #hidden-title{
+  visibility: visible;
+}
 
 
 @keyframes wobble{
