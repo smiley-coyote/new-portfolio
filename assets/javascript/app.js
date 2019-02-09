@@ -174,6 +174,7 @@ function mainToContact() {
   pagePosition = "Contact";
   document.getElementById("butterfly").style.display = "none";
   document.getElementById("grass3").style.visibility = "hidden";
+  document.getElementById("forest-image").style.animation = "forestImageBlurMore 3s linear forwards";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
   document.getElementById ("nav").style.border = "none";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
@@ -225,6 +226,8 @@ function myWorkToContact(){
   document.getElementById ("nav-aboutme").style.color = "black";
   document.getElementById ("nav-contact").style.color = "yellow";
   document.getElementById ("nav-mywork").style.color = "black";
+  document.getElementById("forest-image").style.animation = "forestFromMyWorkToContact 3s linear forwards";
+
   document.getElementById("tree").style.animation = "treeMoveUp 3s ease-in-out forwards";
   document.getElementById("ground").style.animation = "groundUp 3s ease-in-out normal forwards";
   document.getElementById("about-me").style.animation = "fadeOut .5s linear forwards";
@@ -277,10 +280,11 @@ function contactToAboutMe() {
 
 function contactToMyWork() {
   pagePosition = "MyWork"
-  document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
+
   document.getElementById ("nav-aboutme").style.color = "black";
   document.getElementById ("nav-contact").style.color = "black";
   document.getElementById ("nav-mywork").style.color = "yellow";
+  document.getElementById("forest-image").style.animation = "forestContactToMyWork 1s linear forwards";
   document.getElementById("tree").style.animation = "treeContactToMyWork 2s ease-in-out forwards";
   document.getElementById("ground").style.animation = "groundDown2 2s ease-in-out forwards";
   document.getElementById("contact").style.display = "none";

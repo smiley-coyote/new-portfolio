@@ -17,8 +17,9 @@ body {
   position: absolute;
   left: 0px;
   top: 0px;
-
 }
+
+
 
 .border-box {
   position: relative;
@@ -50,6 +51,43 @@ body {
   opacity: .6;
 }
 
+@keyframes forestImageBlurMore {
+  0%{
+    filter: blur(7px);
+   
+  }
+  100%{
+    filter: blur(15px);
+  
+  }
+}
+
+@keyframes forestFromMyWorkToContact {
+  0%{
+    opacity: 0;
+    filter: blur(7px);
+  }
+  50%{
+    opacity: 0;
+    filter: blur(7px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(15px);
+  }
+}
+
+@keyframes forestContactToMyWork {
+  0%{
+    opacity: 1;
+    filter: blur(15px);
+  }
+  100%{
+    opacity: 0;
+    display: none;
+  }
+}
+
 
 
 @keyframes toSkyBlue {
@@ -75,7 +113,7 @@ body {
   font-size: 50px;
   color: white;
   border: 8px solid white;
-  animation: navEnterScreen 1.5s ease-out forwards;
+  animation: navEnterScreen 1s ease-out forwards;
 }
 
 @keyframes navEnterScreen{
@@ -630,6 +668,10 @@ body {
   animation-fill-mode: forwards;
 }
 
+.project-card:hover .project-text{
+  animation: textGrow .5s forwards;
+}
+
 .project-card img {
   transition-duration: .4s;
 }
@@ -656,7 +698,6 @@ body {
 }
 
 /* .project-text:hover {
-  color: yellow;
   animation: textGrow .5s forwards;
 } */
 
@@ -671,10 +712,10 @@ body {
   padding: 10px;
   text-align: center;
   bottom: 0px;
-  right: 35%;
+  right: 25%;
   margin-bottom: 0;
   font-family: 'Georgia', Times, Times New Roman, serif;
-  width: 45px !important;
+  width: 85px !important;
   position: absolute;
   margin-top: 20%;
   font-size: .85em;
@@ -709,13 +750,13 @@ body {
     transform: rotate(0deg);
   }
   25%{
-    transform: rotate(2deg);
+    transform: rotate(1.5deg);
   }
   50%{
     transform: rotate(-1deg);
   }
   75%{
-    transform: rotate(1deg);
+    transform: rotate(.5deg);
   }
   100%{
     transform: rotate(0deg);
