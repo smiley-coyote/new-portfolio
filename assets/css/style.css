@@ -19,15 +19,20 @@ body {
   top: 0px;
 }
 
-
+#main-header p{
+  position: relative;
+  float: right;
+  font-size: 22px;
+  margin-top: 20px;
+}
 
 .border-box {
   position: relative;
   margin-left: 80px;
   margin-top: 80px;
-  width: 400px;
+  width: 500px;
   height: 80px;
-  border-bottom: 3px solid black;
+  border-bottom: 4px solid black;
 }
 
 .border-box h1{
