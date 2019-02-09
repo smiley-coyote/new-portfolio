@@ -90,7 +90,7 @@ function navButton(x) {
     alert("About me to Contact!")
   }
   if(navigate === "AboutMeToMyWork"){
-    alert("About me to My Work!")
+    aboutMeToMyWork();
   }
 
   // **insert code here**
@@ -150,7 +150,7 @@ function mainToAboutMe(){
   document.getElementById("nav-aboutme").style.color = "yellow";
    document.getElementById("about-me").style.display = "block";
    document.getElementById("about-me").style.animation = "fadeIn 2s linear 4s forwards";
-  document.getElementById("tree").style.animation = "treeZoomOutMoveDown 3.5s ease-out normal forwards";
+  document.getElementById("tree").style.animation = "treeMainToAboutMe 3.5s ease-out normal forwards";
   document.body.style.animation="toSkyBlue 2s linear 2s forwards";
   document.getElementById("clouds-layer1").style.animation = "allcloudsmovedown 2s linear 1.5s forwards";
   document.getElementById("clouds-layer2").style.animation = "allcloudsmovedown 3s linear 1.5s forwards";
@@ -179,7 +179,7 @@ function mainToContact() {
   document.getElementById ("nav").style.border = "none";
   document.getElementById("tree-bark").style.animation = "barkFade .2s linear forwards";
   document.getElementById("nav-contact").style.color = "yellow";
-  document.getElementById("tree").style.animation = "treeZoomOutMoveUp 3s ease-out normal forwards";
+  document.getElementById("tree").style.animation = "treeMainToContact 3s ease-out normal forwards";
   document.getElementById("ground").style.animation = "groundUp 3s ease-out normal forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
@@ -198,7 +198,7 @@ for (var i = 0; i < ele.length; i++ ) {
 
 function myWorkToAboutMe(){
   pagePosition = "AboutMe";
-  document.getElementById("tree").style.animation = "treeMoveDown .6s ease-in forwards";
+  document.getElementById("tree").style.animation = "treeMyWorkToAboutMe .6s ease-in forwards";
   document.getElementById("portfolio").style.animation = "fadeOut .1s linear forwards";
   document.getElementById("portfolio-header").style.animation = "fadeOut .1s linear forwards";
   document.getElementById("nav-mywork").style.color = "black";
@@ -225,7 +225,7 @@ function myWorkToContact(){
   document.getElementById ("nav-mywork").style.color = "black";
   document.getElementById("forest-image").style.animation = "forestFromMyWorkToContact 3s linear forwards";
 
-  document.getElementById("tree").style.animation = "treeMoveUp 3s ease-in-out forwards";
+  document.getElementById("tree").style.animation = "treeMyWorkToContact 3s ease-in-out forwards";
   document.getElementById("ground").style.animation = "groundUp 3s ease-in-out normal forwards";
   document.getElementById("about-me").style.animation = "fadeOut .5s linear forwards";
   document.getElementById("cloud1").style.animation = "fadeOut2 1s linear forwards";
@@ -251,6 +251,7 @@ function myWorkToContact(){
 function contactToAboutMe() {
   console.log("groundToAboutMe")
   pagePosition = "AboutMe";
+  
   document.getElementById ("nav-aboutme").style.color = "yellow";
   document.getElementById ("nav-contact").style.color = "black";
   document.getElementById ("nav-mywork").style.color = "black";
@@ -286,11 +287,6 @@ function contactToMyWork() {
   document.getElementById("ground").style.animation = "groundDown2 2s ease-in-out forwards";
   document.getElementById("contact").style.display = "none";
   document.getElementById("portfolio-header").style.animation = "fadeIn 2s linear 2s forwards";
-  document.getElementById("cloud1").style.display = "block";
-  document.getElementById("cloud2").style.display = "block";
-  document.getElementById("cloud3").style.display = "block";
-  document.getElementById("cloud4").style.display = "block";
-  document.getElementById("cloud5").style.display = "block";
   document.getElementById("cloud1").style.animation = "floatRight1 120s linear 1s forwards";
   document.getElementById("cloud2").style.animation = "floatRight1 220s linear 1s forwards";
   document.getElementById("cloud3").style.animation = "floatRight1 150s linear 1s forwards";
@@ -304,3 +300,27 @@ function contactToMyWork() {
 }
 
 
+// From About Me Section
+
+function aboutMeToMyWork() {
+  pagePosition = "MyWork"
+  document.getElementById ("nav-aboutme").style.color = "black";
+  document.getElementById ("nav-contact").style.color = "black";
+  document.getElementById ("nav-mywork").style.color = "yellow";
+  document.getElementById("tree").style.animation = "treeAboutMeToMyWork 4s linear forwards";
+  document.getElementById("clouds-layer1").style.animation = "allcloudsmoveup 2s linear forwards";
+  document.getElementById("clouds-layer2").style.animation = "allcloudsmoveup 3s linear forwards";
+  document.getElementById("clouds-layer3").style.animation = "allcloudsmoveup 4s linear forwards";
+  document.getElementById("about-me").style.display = "none";
+  document.getElementById ("portfolio").style.display = "block";
+  document.getElementById ("portfolio").style.animation = "fadeIn 2s linear 4.5s forwards";
+  document.getElementById("portfolio-header").style.animation = "fadeIn 2s linear 4.5s forwards";
+  document.getElementById("clouds").style.animation = "cloudsMoveUp 1s linear forwards";
+  // document.getElementById("cloud1").style.animation = "fadeOut2 1s linear forwards";
+  // document.getElementById("cloud2").style.animation = "fadeOut2 1s linear forwards";
+  // document.getElementById("cloud3").style.animation = "fadeOut2 1s linear forwards";
+  // document.getElementById("cloud4").style.animation = "fadeOut2 1s linear forwards";
+  // document.getElementById("cloud5").style.animation = "fadeOut2 1s linear forwards";
+  document.body.style.animation="toLighterBlue 4.5s linear forwards";
+
+}

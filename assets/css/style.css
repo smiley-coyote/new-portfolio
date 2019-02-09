@@ -101,6 +101,15 @@ body {
   }
 }
 
+@keyframes toLighterBlue {
+  0%{
+    background-color: rgb(97, 243, 253);
+  }
+  100%{
+    background-color: #B4FAFF;
+  }
+}
+
 .wrapper {
   width: 100%;
   height: 800px;
@@ -357,6 +366,7 @@ body {
 #portfolio {
   opacity: 0;
   display: none;
+  z-index: 0;
 }
 
 @keyframes fadeIn{
@@ -578,7 +588,7 @@ body {
     filter: blur(0px);
   }
 }
-@keyframes treeZoomOutMoveDown {
+@keyframes treeMainToAboutMe {
   0%{
     transform: translate(-1300px, -1850px) scale(2);
   }
@@ -590,7 +600,7 @@ body {
   }
 }
 
-@keyframes treeZoomOutMoveUp {
+@keyframes treeMainToContact {
   0%{
     transform: translate(-1300px, -1850px) scale(2);
   }
@@ -601,7 +611,7 @@ body {
   }
 }
 
-@keyframes treeMoveDown {
+@keyframes treeMyWorkToAboutMe {
   0%{
     transform: translate(-2300px, -1700px) scale(.305);
     filter: blur(0px);
@@ -612,7 +622,7 @@ body {
   }
 }
 
-@keyframes treeMoveUp {
+@keyframes treeMyWorkToContact {
   0%{
     transform: translate(-2300px, -1700px) scale(.305);
     filter: blur(0px);
@@ -640,6 +650,17 @@ body {
     filter: blur(0px);
   }
   100%{
+    transform: translate(-2300px, -1700px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeAboutMeToMyWork {
+  0%{
+    transform: translate(-2300px, 1000px) scale(.305);
+    filter: blur(0px);
+  }
+  100% {
     transform: translate(-2300px, -1700px) scale(.305);
     filter: blur(0px);
   }
@@ -948,6 +969,14 @@ body {
   left: 0px;
 }
 
+@keyframes cloudsMoveUp {
+100%{
+  transform: translateY(-2000px);
+}
+}
+
+
+
 #clouds-layer1 {
   position: absolute;
   top: 0px;
@@ -981,7 +1010,7 @@ body {
 
 @keyframes allcloudsmovedown {
   0% {
-    transform: translate(0px, -1500px);
+    transform: translate(-140px, -1500px);
   }
   40% {
     opacity: 1;
@@ -990,7 +1019,23 @@ body {
     opacity: 0;
   }
   100%{
-    transform: translate(0px, 1000px);
+    transform: translate(-140px, 1000px);
+    opacity: 0;
+  }
+}
+
+@keyframes allcloudsmoveup {
+  0% {
+    transform: translate(-140px, 1000px);
+  }
+  20% {
+    opacity: 1;
+  }
+  94%{
+    opacity: 1;
+  }
+  100%{
+    transform: translate(0px, -1500px);
     opacity: 0;
   }
 }
@@ -1013,6 +1058,8 @@ body {
     opacity: 1;
   }
 }
+
+
 
 
 @keyframes floatRight1{
