@@ -206,11 +206,8 @@ function myWorkToAboutMe(){
   document.getElementById("clouds-layer1").style.animation = "allcloudsmovedown 2s linear .5s forwards";
   document.getElementById("clouds-layer2").style.animation = "allcloudsmovedown 3s linear .5s forwards";
   document.getElementById("clouds-layer3").style.animation = "allcloudsmovedown 4s linear .5s forwards";
-  // document.getElementById("cloud1").style.opacity = "0";
-  // document.getElementById("cloud2").style.opacity = "0";
-  // document.getElementById("cloud3").style.opacity = "0";
-  // document.getElementById("cloud4").style.opacity = "0";
-  // document.getElementById("cloud5").style.opacity = "0";
+  document.getElementById("clouds").style.animation = "allcloudsFadeOutandIn 5s linear forwards";
+
   document.getElementById("cloud1").style.animation = "floatRight1 120s linear 5.5s forwards";
   document.getElementById("cloud2").style.animation = "floatRight1 220s linear 5.5s forwards";
   document.getElementById("cloud3").style.animation = "floatRight1 150s linear 5.5s forwards";

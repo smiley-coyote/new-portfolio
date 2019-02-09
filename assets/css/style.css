@@ -911,7 +911,7 @@ body {
 
 
 
-.cloud img{
+#clouds img{
   height: 300px;
   width: auto;
   z-index: -5;
@@ -1000,6 +1000,18 @@ body {
 #nav li:hover {
   color: yellow !important;
   cursor: pointer;
+}
+
+@keyframes allcloudsFadeOutandIn {
+  0%{
+    opacity: 0;
+  }
+  70%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 
