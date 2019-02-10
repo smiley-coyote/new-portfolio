@@ -355,6 +355,8 @@ function aboutMeToContacts() {
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
   document.getElementById ("nav").style.animation = "navShrink3 3s ease-in-out forwards";
   document.getElementById ("nav").style.borderLeft = "none";
+  document.body.style.animation="toLighterBlue 4.5s linear forwards";
+    document.getElementById("forest-image").style.animation = "forestFromAboutMeToContact 6s linear forwards";
   var ele = document.getElementsByClassName('nav-button');
   for (var i = 0; i < ele.length; i++ ) {
       ele[i].style.animationPlayState = "running";

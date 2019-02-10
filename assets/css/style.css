@@ -82,6 +82,21 @@ body {
   }
 }
 
+@keyframes forestFromAboutMeToContact {
+  0%{
+    opacity: 0;
+    filter: blur(7px);
+  }
+  80%{
+    opacity: 0;
+    filter: blur(7px);
+  }
+  100%{
+    opacity: 1;
+    filter: blur(15px);
+  }
+}
+
 @keyframes forestContactToMyWork {
   0%{
     opacity: 1;
@@ -387,6 +402,11 @@ justify-content: center;
   display: block;
 }
 
+#findme-card-1:hover p{
+  display: block;
+  animation: growUp .2s linear forwards;
+}
+
 #findme-card-1:hover #codepen{
   display: none;
 }
@@ -399,8 +419,34 @@ justify-content: center;
   background-color: white;
 }
 
+#findme-card-2:hover p{
+  display: block;
+  animation: growUp .2s linear forwards;
+}
+
+@keyframes growUp {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
 #codepen2{
   display: none;
+}
+
+#findme-card-1 p{
+  display: none;
+  position: absolute;
+  right: -180px;
+}
+
+#findme-card-2 p{
+  display: none;
+  position: absolute;
+  right: -170px;
 }
 
 #findme-card-1{
@@ -420,7 +466,7 @@ justify-content: center;
   bottom: 50px;
   height: 100px;
   width: 100px;
-  background-color: rgb(52, 122, 253);
+  background-color: #6582f7;
 }
 
 @keyframes PlopIn{
