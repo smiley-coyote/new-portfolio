@@ -160,6 +160,7 @@ body {
 
 
 
+
 /* @keyframes leftBorder {
   100%{
     border-left: 2px solid black;
@@ -188,6 +189,15 @@ body {
 }
 
 @keyframes groundUp {
+  100%{
+    transform: translateY(-680px)
+  }
+}
+
+@keyframes groundUp2 {
+  0%{
+    transform: translateY(4150px)
+  }
   100%{
     transform: translateY(-680px)
   }
@@ -247,9 +257,7 @@ body {
 .nav-button {
   list-style-type: none;
   padding: 50px;
-  animation: paddingChange 1.5s;
-  animation-play-state: paused;
-  animation-fill-mode: forwards;
+ 
 }
 
 @keyframes paddingChange {
@@ -354,6 +362,75 @@ body {
   align-content: center;
   height: 130px;
   width: 600px;
+}
+
+
+
+#find-me img {
+  height: 80px;
+  width: 80px;
+}
+
+.findme-card {
+position: absolute;
+height: 150px;
+width: 150px;
+background: white;
+border-radius: 10%;
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+
+#findme-card-1:hover #codepen2{
+  display: block;
+}
+
+#findme-card-1:hover #codepen{
+  display: none;
+}
+
+#findme-card-1:hover {
+  background-color: white;
+}
+
+#findme-card-2:hover {
+  background-color: white;
+}
+
+#codepen2{
+  display: none;
+}
+
+#findme-card-1{
+  opacity: 0;
+  position: absolute;
+  right: 225px;
+  bottom: 160px;
+  height: 100px;
+  width: 100px;
+  background-color: black;
+}
+
+#findme-card-2{
+  opacity: 0;
+  position: absolute;
+  right: 225px;
+  bottom: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(52, 122, 253);
+}
+
+@keyframes PlopIn{
+0%{
+  transform: scale(1.3)
+}
+100%{
+  transform: scale(1);
+  opacity: 1;
+}
 }
 
 .box {
@@ -662,6 +739,17 @@ body {
   }
   100% {
     transform: translate(-2300px, -1700px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeAboutMeToContacts {
+  0%{
+    transform: translate(-2300px, 3000px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2200px, -2400px) scale(.5);
     filter: blur(0px);
   }
 }
