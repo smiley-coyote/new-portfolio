@@ -747,89 +747,87 @@ justify-content: center;
 }
 @keyframes treeMainToAboutMe {
   0%{
-    transform: translate(-1300px, -1850px) scale(2);
+    transform: translate(-670px, -1850px) scale(2);
   }
-  /* 25%{
-    transform: translate(-2300px, -1700px) scale(.305);
-  } */
+
   100%{
-    transform: translate(-2300px, 1700px) scale(.305);
+    transform: translate(-1600px, 1700px) scale(.305);
   }
 }
 
 @keyframes treeMainToContact {
   0%{
-    transform: translate(-1300px, -1850px) scale(2);
+    transform: translate(-670px, -1850px) scale(2);
   }
 
   100%{
-    transform: translate(-2200px, -2400px) scale(.5);
+    transform: translate(-1600px, -2400px) scale(.5);
     filter: blur(0px);
   }
 }
 
 @keyframes treeMyWorkToAboutMe {
   0%{
-    transform: translate(-2300px, -1700px) scale(.305);
+    transform: translate(-1650px, -1700px) scale(.305);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-2300px, -1000px) scale(.305);
+    transform: translate(-1650px, -500px) scale(.305);
     filter: blur(0px);
   }
 }
 
 @keyframes treeMyWorkToContact {
   0%{
-    transform: translate(-2300px, -1700px) scale(.305);
+    transform: translate(-1650px, -1700px) scale(.305);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-2200px, -2400px) scale(.5);
+    transform: translate(-1600px, -2400px) scale(.5);
     filter: blur(0px);
   }
 }
 
 @keyframes treeContactToAboutMe {
   0%{
-    transform: translate(-2200px, -2400px) scale(.5);
+    transform: translate(-1600px, -2400px) scale(.5);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-2300px, -1000px) scale(.305);
+    transform: translate(-1650px, -500px) scale(.305);
     filter: blur(0px);
   }
 }
 
 @keyframes treeContactToMyWork {
   0%{
-    transform: translate(-2200px, -2400px) scale(.5);
+    transform: translate(-1600px, -2400px) scale(.5);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-2300px, -1700px) scale(.305);
+    transform: translate(-1650px, -1700px) scale(.305);
     filter: blur(0px);
   }
 }
 
 @keyframes treeAboutMeToMyWork {
   0%{
-    transform: translate(-2300px, 1000px) scale(.305);
+    transform: translate(-1650px, 1000px) scale(.305);
     filter: blur(0px);
   }
   100% {
-    transform: translate(-2300px, -1700px) scale(.305);
+    transform: translate(-1650px, -1700px) scale(.305);
     filter: blur(0px);
   }
 }
 
 @keyframes treeAboutMeToContacts {
   0%{
-    transform: translate(-2300px, 3000px) scale(.305);
+    transform: translate(-1650px, 3000px) scale(.305);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-2200px, -2400px) scale(.5);
+    transform: translate(-1600px, -2400px) scale(.5);
     filter: blur(0px);
   }
 }

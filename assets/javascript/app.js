@@ -1,25 +1,45 @@
 var pagePosition = "Main";
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-
+console.log(viewportWidth)
 /* 
 
 ---------------------
 
 
+*******TO DO********
 
 
 Page animations:
 
 For screen size larger than 1250
     main -> My work ✓
-    main -> About me
-    main -> Contact
+    main -> About me ✓
+    main -> Contact ✓
+
+    My Work -> About me ✓
+    My Work -> Contact ✓
+
+    About me -> Contact ✓
+    About me -> My Work ✓
+
+    Contact -> My Work ✓
+    Contact ->  About Me ✓
 
 For screen size less then or equal to 1250 && greater than 1130
     
     main -> My work 
     main -> About me
     main -> Contact
+   
+    My Work -> About me
+    My Work -> Contact
+
+    About me -> Contact
+    About me -> My Work
+
+    Contact -> My Work
+    Contact ->  About Me
+
 
 
 For screen size less then or equal to 1130 && greater than 920
@@ -28,11 +48,29 @@ For screen size less then or equal to 1130 && greater than 920
     main -> About me
     main -> Contact
 
+    My Work -> About me
+    My Work -> Contact
+
+    About me -> Contact
+    About me -> My Work
+
+    Contact -> My Work
+    Contact ->  About Me
+
 For screen size less then or equal to 920 && greater than 420
     
     main -> My work 
     main -> About me
     main -> Contact
+
+    My Work -> About me
+    My Work -> Contact
+
+    About me -> Contact
+    About me -> My Work
+
+    Contact -> My Work
+    Contact ->  About Me
 
 For screen size less then or equal to 420
     
@@ -40,12 +78,35 @@ For screen size less then or equal to 420
     main -> About me
     main -> Contact
 
+    My Work -> About me
+    My Work -> Contact
+
+    About me -> Contact
+    About me -> My Work
+
+    Contact -> My Work
+    Contact ->  About Me
+
+
+===========================
+
+Create Front Page
+
+ideas: 
+
+1. The following letters types onto the screen
+
+Hello! My name is Nicholas Alex and I am a Full Stack Web Developer
+
+ENTER
+
+
+
+
 
 
 --------------------
 
-Contact page animations:
-    contact -> 
 
 */
 
@@ -57,7 +118,15 @@ function navButton(x) {
    nav.classList.add("small-nav");
 
  
+
+
+  // Screen size large
+
+
+  if(viewportWidth > 1250){
+
   // From main page ==================
+
   if(navigate === "MainToBlog"){
     alert("Blog Coming Soon!")
   }
@@ -73,6 +142,7 @@ function navButton(x) {
     mainToContact();
   }
 
+  
 
   // From My Work page ==================
   if(navigate === "MyWorkToBlog"){
@@ -111,6 +181,7 @@ function navButton(x) {
   if(navigate === "ContactToMyWork"){
     contactToMyWork();
   }
+}
   
 }
 
