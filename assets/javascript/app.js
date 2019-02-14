@@ -28,11 +28,11 @@ For screen size larger than 1250
 For screen size less then or equal to 1250 && greater than 1130
     
     main -> My work ✓
-    main -> About me
-    main -> Contact
+    main -> About me ✓
+    main -> Contact ✓
    
-    My Work -> About me
-    My Work -> Contact
+    My Work -> About me ✓
+    My Work -> Contact ✓
 
     About me -> Contact
     About me -> My Work
@@ -273,11 +273,11 @@ function mainToContact() {
   document.getElementById ("nav").style.border = "none";
   document.getElementById("tree-bark").style.display = "none";
   document.getElementById("nav-contact").style.color = "yellow";
-  document.getElementById("tree").style.animation = "treeMainToContact 2s ease-out normal forwards";
+
   document.getElementById("forest-ground").style.animation = "groundUp 2s ease-out normal forwards";
   document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
-  document.getElementById ("nav").style.animation = "navShrinkContacts 2s ease-in-out forwards";
+
   document.getElementById("grass").style.visibility = "hidden";
   document.getElementById("grass2").style.visibility = "hidden";
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 2s running";
@@ -285,6 +285,16 @@ function mainToContact() {
   var ele = document.getElementsByClassName('nav-button');
   for (var i = 0; i < ele.length; i++ ) {
     ele[i].style.animation = "paddingChange 1.5s forwards";
+}
+
+if(viewportWidth > 1250){
+  document.getElementById ("nav").style.animation = "navShrinkContacts 2s ease-in-out forwards";
+  document.getElementById("tree").style.animation = "treeMainToContact 2s ease-out normal forwards";
+}
+if(viewportWidth < 1250 && viewportWidth > 1130){
+  nav.classList.add("med-large-nav");
+  document.getElementById ("nav").style.animation = "navShrinkContacts2 2s ease-in-out forwards";
+  document.getElementById("tree").style.animation = "treeMainToContact2 2s ease-out normal forwards";
 }
 }
 
@@ -294,7 +304,7 @@ function myWorkToAboutMe(){
   pagePosition = "AboutMe";
 
 
-  document.getElementById("tree").style.animation = "treeMyWorkToAboutMe .6s ease-in forwards";
+  
   document.getElementById("portfolio").style.display = "none";
 
   document.getElementById("nav-mywork").style.color = "black";
@@ -314,6 +324,13 @@ function myWorkToAboutMe(){
   document.getElementById("about-me").style.display = "block";
   document.getElementById("about-me").style.animation = "fadeIn 2s linear 3s forwards";
   document.getElementById("wrapper").style.animation="toSkyBlue 2s linear 2s forwards";
+  if(viewportWidth > 1250){
+    document.getElementById("tree").style.animation = "treeMyWorkToAboutMe .6s ease-in forwards";
+  }
+  if(viewportWidth < 1250 && viewportWidth > 1130){
+    nav.classList.add("med-large-nav");
+    document.getElementById("tree").style.animation = "treeMyWorkToAboutMe2 .6s ease-in forwards";
+  }
 }
 
 function myWorkToContact(){
@@ -323,7 +340,7 @@ function myWorkToContact(){
   document.getElementById ("nav-mywork").style.color = "black";
   document.getElementById("forest-image").style.animation = "forestFromMyWorkToContact 2s linear forwards";
   document.getElementById("portfolio").style.display = "none";
-  document.getElementById("tree").style.animation = "treeMyWorkToContact 2s ease-in-out forwards";
+
   document.getElementById("forest-ground").style.animation = "groundUp 2s ease-in-out normal forwards";
   document.getElementById("about-me").style.animation = "fadeOut .5s linear forwards";
   document.getElementById("cloud1").style.animation = "fadeOut2 1s linear forwards";
@@ -336,11 +353,20 @@ function myWorkToContact(){
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 2s running";
   document.getElementById("contact").style.display = "block";
   document.getElementById ("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
-  document.getElementById ("nav").style.animation = "navShrinkContacts2 2s ease-in-out forwards";
+
   document.getElementById ("nav").style.borderLeft = "none";
   var ele = document.getElementsByClassName('nav-button');
   for (var i = 0; i < ele.length; i++ ) {
       ele[i].style.animation = "paddingChange 1.5s forwards";
+  }
+  if(viewportWidth > 1250){
+    document.getElementById("tree").style.animation = "treeMyWorkToContact 2s ease-in-out forwards";
+    document.getElementById ("nav").style.animation = "navShrinkContacts2 2s ease-in-out forwards";
+  }
+  if(viewportWidth < 1250 && viewportWidth > 1130){
+    nav.classList.add("med-large-nav");
+    document.getElementById("tree").style.animation = "treeMyWorkToContact2 2s ease-in-out forwards";
+    document.getElementById ("nav").style.animation = "navShrinkContacts3 2s ease-in-out forwards";
   }
 }
 
@@ -455,4 +481,5 @@ function aboutMeToContacts() {
   for (var i = 0; i < ele.length; i++ ) {
       ele[i].style.animationPlayState = "running";
   }
+  
 }

@@ -288,6 +288,10 @@ body {
 }
 
 @keyframes navShrinkContacts {
+  0%{
+    transform: scale(.5) translate(200px, -200px);
+    color: black;
+  }
   55% {
     border-left: 0px;
   }
@@ -298,12 +302,21 @@ body {
 }
 
 @keyframes navShrinkContacts2 {
-  0%{
-    transform: scale(.5) translate(200px, -200px);
+
+  100%{
+    transform: scale(.55) translate(-420px, -130px);
     color: black;
   }
+}
+
+@keyframes navShrinkContacts3 {
+  0%{
+    transform: scale(.5) translate(100px, -200px);
+    color: black;
+  }
+
   100%{
-    transform: scale(.55) translate(-420px, -80px);
+    transform: scale(.55) translate(-420px, -130px);
     color: black;
   }
 }
@@ -378,6 +391,8 @@ body {
   background: rgb(255, 255, 255);
   overflow: scroll;
   opacity: .7;
+  z-index: 3;
+  border-radius: 1%;
 }
 
 #about-me-inner-window {
@@ -401,6 +416,7 @@ body {
   background: rgb(255, 255, 255);
   height: 220px;
   width: 620px;
+  border-radius: 1%;
 }
 
 #skills-header {
@@ -897,8 +913,7 @@ z-index: 1;
   100%{
     /* transform: translate(-2300px, -1700px) scale(.305); */
     /* transform: translate(-46%, -34%) scale(.305); */
-    transform: translate(-1750px, -1700px) scale(.305);
-
+    transform: translate(-1825px, -1800px) scale(.305);
     filter: blur(0px);
   }
 }
@@ -910,6 +925,50 @@ z-index: 1;
 
   100%{
     transform: translate(-2000px, 1700px) scale(.305);
+  }
+}
+
+@keyframes treeMainToContact2 {
+  0%{
+    transform: translate(-900px, -1850px) scale(1.7);
+  }
+
+  100%{
+    transform: translate(-1750px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMyWorkToAboutMe2 {
+  0%{
+    transform: translate(-1825px, -1800px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2000px, 1700px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMyWorkToContact2 {
+  0%{
+    transform: translate(-1825px, -1800px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1750px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeAboutMeToContacts2 {
+  0%{
+    transform: translate(-2000px, 1700px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1750px, -2500px) scale(.5);
+    filter: blur(0px);
   }
 }
 
@@ -1336,12 +1395,10 @@ z-index: 1;
 
 
 @media only screen and (max-width: 1250px) {
-  body{
-    width: 960px;
-  }
-  #wrapper {
-    width: 960px;
-  }
+
+ #wrapper {
+   width: 1060px;
+ }
 
   #tree {
     transform: translate(-900px, -1850px) scale(1.7);
@@ -1349,13 +1406,13 @@ z-index: 1;
   }
 
   #nav {
-    margin-right: 375px;
+    margin-right: 275px;
     font-size: 40px;
   }
 
   #tree-bark {
     width: 600px;
-    transform: translateX(575px);
+    transform: translateX(-130px);
   }
 
   .border-box {
@@ -1371,7 +1428,11 @@ z-index: 1;
   }
 
   #portfolio {
-    margin-left: -75px;
+    margin-left: -165px;
+  }
+
+  #portfolio-header {
+    left: 195px;
   }
 
   .med-large-nav {
@@ -1385,50 +1446,86 @@ z-index: 1;
 
   #about-me-window {
     left: 350px;
-    width: 550px;
+    width: 450px;
     height: 300px;
     top: 130px;
    
   }
 
   #about-me-inner-window {
-    width: 500px;
-    height: 250px;
+    width: 400px;
+    height: 260px;
 
   }
 
   #skills-outer-window {
-    width: 550px;
     left: 350px;
+    width: 450px;
     top: 475px;
   }
 
   #skills {
-    width: 530px;
-  }
-
-  #findme-card-1{
-    right: 175px;
-    bottom: 200px;
-  }
-
-  #findme-card-2{
-    right: 175px;
-    bottom: 90px;
-  }
-
-  #findme-card-1 p{
-    font-size: 14px;
-    right: -160px;
-  }
-
-  #findme-card-2 p{
-    font-size: 14px;
-    right: -150px;
+    width: 420px;
   }
 
   #skills-list {
-    margin-left: -30px;
+    margin-left: 50px;
+    font-size: 12px;
+    width: 320px;
+  }
+
+  .findme-card p {
+    font-size: 12px;
+  }
+
+  #find-me img {
+    height: 60px;
+    width: 60px;
+  }
+
+  #findme-card-1{
+    right: 300px;
+    bottom: 200px;
+    width: 85px;
+    height: 85px;
+  }
+
+  #findme-card-2{
+    right: 300px;
+    bottom: 95px;
+    width: 85px;
+    height: 85px;
+  }
+
+  #findme-card-1 p{
+ 
+    right: -145px;
+    bottom: 20px;
+  
+  }
+  
+  #findme-card-2 p{
+  
+    right: -135px;
+    bottom: 20px;
+  }
+ 
+
+
+
+  #contact-card-1 {
+    left: 180px;
+    bottom: 300px;
+  }
+  
+  #contact-card-2 {
+    left: 500px;
+    bottom: 150px;
+  }
+  
+  #contact-card-3 {
+    right: 360px;
+    bottom: 270px;
   }
 
 }
