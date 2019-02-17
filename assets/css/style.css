@@ -287,6 +287,15 @@ body {
   }
 }
 
+@keyframes navShrink3 {
+
+  100%{
+    transform: scale(.5) translate(200px, -230px);
+    color: black;
+    
+  }
+}
+
 @keyframes navShrinkContacts {
   55% {
     border-left: 0px;
@@ -317,10 +326,30 @@ body {
   }
 }
 
+@keyframes navShrinkContacts4 {
+  0%{
+    transform: scale(.5) translate(100px, -200px);
+    color: black;
+  }
+
+  100%{
+    transform: scale(.5) translate(-300px, -90px);
+    color: black;
+  }
+}
+
 @keyframes navShrinkContacts1250 {
 
   100%{
     transform: scale(.55) translate(-420px, -130px);
+    color: black;
+  }
+}
+
+@keyframes navShrinkContacts1060 {
+
+  100%{
+    transform: scale(.49) translate(-320px, -100px);
     color: black;
   }
 }
@@ -498,6 +527,7 @@ z-index: 1;
   display: block;
   animation: growUp .2s linear forwards;
 }
+
 
 @keyframes growUp {
   0%{
@@ -887,7 +917,7 @@ z-index: 1;
   }
 }
 
-/* For screens less than 1250 and greater than 1130 */
+/* For screens less than 1250 and greater than 1160 */
 
 @keyframes treeMainToMyWork2 {
   0%{
@@ -989,6 +1019,59 @@ z-index: 1;
   }
 }
 
+/* For screens less than 1160 but greater than 950 */
+@keyframes treeMainToMyWork3 {
+  0%{
+    transform: translate(-1150px, -1850px) scale(1.5);
+  }
+  100%{
+    transform: translate(-1875px, -1830px) scale(.3);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMainToContact3 {
+  0%{
+    transform: translate(-1150px, -1850px) scale(1.5);
+  }
+
+  100%{
+    transform: translate(-1800px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMainToAboutMe3 {
+  0%{
+    transform: translate(-1150px, -1850px) scale(1.5);
+  }
+
+  100%{
+    transform: translate(-2150px, 1700px) scale(.305);
+  }
+}
+
+@keyframes treeMyWorkToAboutMe3 {
+  0%{
+    transform: translate(-1875px, -1850px) scale(.3);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1875px, 1700px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMyWorkToContact3 {
+  0%{
+    transform: translate(-1875px, -1850px) scale(.3);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1800px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+}
 
 
 #portfolio-header{
@@ -1532,6 +1615,12 @@ z-index: 1;
     bottom: 20px;
   }
  
+  #grass, #grass2, #grass3 {
+    width: 600px;
+    bottom: 200px;
+   
+    height: 700px;
+  }
 
 
 
@@ -1552,22 +1641,28 @@ z-index: 1;
 
 }
 
-@media only screen and (max-width: 1130px) {
+@media only screen and (max-width: 1060px) {
 
   #tree {
     transform: translate(-1150px, -1850px) scale(1.5);
   }
 
   #nav {
-    margin-right: 540px;
+    margin-right: 380px;
     font-size: 40px;
-    height: 550px;
-
+    
   }
 
 #grass, #grass2, #grass3 {
-  width: 500px;
+  width: 600px;
   bottom: 200px;
+  left: -55px;
+  height: 700px;
+}
+
+#tree-bark {
+  width: 535px;
+  transform: translateX(-330px);
 }
 
 #butterfly img {
@@ -1575,28 +1670,118 @@ z-index: 1;
   width: auto;
 }
 
-  #tree-bark {
-    width: 520px;
-    transform: translateX(450px);
-  }
+#portfolio {
+  margin-left: -200px;
+}
+
+.project-card {
+  width: 190px;
+  height: 110px;
+}
+
+
+#portfolio img {
+  width: 170px;
+  height: 90px;
+}
 
   .border-box {
-    height: 50px;
+    height: 60px;
     width: 400px;
     margin-top: 50px;
     margin-left: 50px;
   }
 
   .border-box h1{
-    font-size: 40px;
+    font-size: 50px;
+  
+  }
+
+  #main-header {
+    margin-top: -850px;
+    width: 460px;
   }
 
   #main-header p{
     font-size: 18px;
   }
+
+  .second-card{
+    top: -18px;
+    right: -750px;
+    
+  }
+  #contact-card-1 {
+    left: 160px;
+    bottom: 300px;
+  }
+  #contact-card-1 img {
+    height: 85px;
+    width: 85px;
+  }
+  
+  #contact-card-2 {
+    left: 400px;
+    bottom: 200px;
+  }
+  #contact-card-2 img {
+    height: 85px;
+    width: 85px;
+  }
+ 
+  
+  #contact-card-3 {
+    right: 560px;
+    bottom: 300px;
+  }
+
+  #contact-card-3 img {
+    height: 150px;
+    width: auto;
+  }
+  .contact-card {
+    height: 110px;
+    width: 110px;
+  }
+#contact-header {
+  top: 10px;
 }
 
-@media only screen and (max-width: 920px) {
+#about-me-header {
+  top: 75px;
+}
+
+#about-me-window {
+  left: 330px;
+}
+
+#skills-outer-window {
+  left: 330px;
+}
+
+#findme-card-1 {
+  bottom:230px; 
+}
+
+#findme-card-1 p{
+  width: 130px;
+  right: -30px;
+  bottom: -35px;
+}
+
+#findme-card-2 {
+  bottom:110px; 
+}
+
+#findme-card-2 p{
+  width: 130px;
+  right: -30px;
+  bottom: -35px;
+}
+  
+}
+
+@media only screen and (max-width: 950px) {
 
   #tree {
     transform: translate(-1900px, -1750px) scale(1);
