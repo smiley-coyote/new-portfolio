@@ -174,6 +174,7 @@ body {
   border: 8px solid white;
   animation: navEnterScreen 1s ease-out forwards running;
   z-index: 10;
+  
 }
 
 @keyframes navEnterScreen{
@@ -202,6 +203,12 @@ body {
 @keyframes shrinkHeight {
   100%{
     height: 100px;
+  }
+}
+
+@keyframes shrinkHeight2 {
+  100%{
+    height: 30px;
   }
 }
 
@@ -235,6 +242,12 @@ body {
   left: 0px;
 }
 
+@keyframes groundPosition {
+  100%{
+    transform: translateY(-75px);
+  }
+}
+
 @keyframes groundUp {
   100%{
     transform: translateY(-710px)
@@ -247,6 +260,24 @@ body {
   }
   100%{
     transform: translateY(-710px)
+  }
+}
+
+@keyframes groundUp3 {
+  0%{
+    transform: translateY(-100px)
+  }
+  100%{
+    transform: translateY(-730px)
+  }
+}
+
+@keyframes groundUp4 {
+  0%{
+    transform: translateY(-100px)
+  }
+  100%{
+    transform: translateY(-740px)
   }
 }
 
@@ -296,6 +327,22 @@ body {
   }
 }
 
+@keyframes navShrink4 {
+
+  100%{
+    transform: scale(.7) translate(200px, -240px);
+    color: black;
+  }
+}
+
+@keyframes navShrink5 {
+
+  100%{
+    transform: scale(.65) translate(300px, -250px);
+    color: black;
+  }
+}
+
 @keyframes navShrinkContacts {
   55% {
     border-left: 0px;
@@ -328,7 +375,7 @@ body {
 
 @keyframes navShrinkContacts4 {
   0%{
-    transform: scale(.5) translate(100px, -200px);
+    transform: scale(.5) translate(200px, -200px);
     color: black;
   }
 
@@ -337,6 +384,8 @@ body {
     color: black;
   }
 }
+
+
 
 @keyframes navShrinkContacts1250 {
 
@@ -426,11 +475,9 @@ body {
   opacity: .7;
   z-index: 3;
   border-radius: 1%;
-}
-
-#about-me-inner-window {
   padding: 10px;
 }
+
 
 
 #skills-outer-window{
@@ -1073,6 +1120,82 @@ z-index: 1;
   }
 }
 
+@keyframes treeAboutMeToContacts3 {
+  0%{
+    transform: translate(-1875px, 3000px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1800px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeAboutMeToMyWork3 {
+  0%{
+    transform: translate(-1875px, 1700px) scale(.3);
+    filter: blur(0px);
+  }
+  100% {
+    transform: translate(-1875px, -1830px) scale(.3);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToMyWork3 {
+  0%{
+    transform: translate(-1800px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1875px, -1830px) scale(.3);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToAboutMe3 {
+  0%{
+    transform: translate(-1800px, -2500px) scale(.5);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1875px, -1000px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+/* for screen size less than or equal to 950 and greater than 620 */
+@keyframes treeMainToMyWork4 {
+  0%{
+    transform: translate(-1825px, -2000px) scale(1.2);
+  }
+  100%{
+    transform: translate(-2080px, -1930px) scale(.25);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeMainToAboutMe4 {
+  0%{
+    transform: translate(-1825px, -2000px) scale(1.2);
+  }
+
+  100%{
+    transform: translate(-2150px, 1700px) scale(.305);
+  }
+}
+
+@keyframes treeMainToContact4 {
+  0%{
+    transform: translate(-1825px, -2000px) scale(1.2);
+  }
+
+  100%{
+    transform: translate(-2025px, -2530px) scale(.37);
+    filter: blur(6px);
+  }
+}
+
 
 #portfolio-header{
   font-family: 'Nunito Sans', sans-serif;
@@ -1643,6 +1766,10 @@ z-index: 1;
 
 @media only screen and (max-width: 1060px) {
 
+  #wrapper {
+    width: 1000px;
+  } 
+
   #tree {
     transform: translate(-1150px, -1850px) scale(1.5);
   }
@@ -1672,6 +1799,11 @@ z-index: 1;
 
 #portfolio {
   margin-left: -200px;
+}
+
+#portfolio-header {
+  left: 205px;
+  top: 50px;
 }
 
 .project-card {
@@ -1745,6 +1877,7 @@ z-index: 1;
   }
 #contact-header {
   top: 10px;
+  left: 40px;
 }
 
 #about-me-header {
@@ -1783,27 +1916,80 @@ z-index: 1;
 
 @media only screen and (max-width: 950px) {
 
+  #wrapper {
+    width: 700px;
+    height:740px;
+  }
+
   #tree {
-    transform: translate(-1900px, -1750px) scale(1);
+    transform: translate(-1825px, -2000px) scale(1.2);
   }
 
   #nav {
-    margin-right: 1130px;
-    margin-top: 14%;
-    float: right;
+    margin-right: 1000px;
+    margin-top: 50px;
     width: 220px;
     font-size: 40px;
-    height: 450px;
+    height: 340px;
     font-size: 25px;
-    justify-content: space-around;
-    justify-items: space-around;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
+
+ 
+#nav-list {
+  line-height: 0px;
+}
+
+.project-card {
+  width: 140px;
+  height: 90px;
+}
+
+#portfolio-header {
+  font-size: 2.4em;
+  margin-left: 80px;
+}
+
+.project-text {
+  font-size: 11px;
+}
+
+#hidden-title {
+  font-size: 8px;
+  width: 52px !important;
+}
+
+#portfolio {
+  margin-left: -275px;
+}
+
+#portfolio img {
+  width: 120px;
+  height: 75px;
+}
+
+.second-card {
+  right: -670px;
+  top: 50px;
+}
+
+.fourth-card {
+  left: 700px;
+  top: -20px;
+}
+
+.sixth-card {
+  left: 660px;
+  top: -90px;
+}
 
 
 
 #grass, #grass2, #grass3 {
-  display: none;
+  width: 500px;
+  bottom: 300px;
+  left: 320px;
+  height: 600px;
 }
 
 #butterfly img {
@@ -1814,34 +2000,134 @@ z-index: 1;
 #butterfly {
   z-index: -1;
   transform: translateZ(0);
+  margin-left: 200px;
+  
 }
 
-  #tree-bark {
-    display: none;
-  }
+#tree-bark {
+  width: 420px;
+  transform: translateX(-950px);
+}
 
   .border-box {
-    height: 50px;
-    width: 300px;
+    height: 40px;
+    width: 250px;
     margin-top: 50px;
     margin-left: 50px;
   }
 
   .border-box h1{
-    font-size: 40px;
+    font-size: 30px;
   float: none;
     text-align: center;
   }
 
   #main-header {
-
-    left: -10px;
+    width: 300px;
+    left: 0px;
   }
+
+ 
 
   #main-header p{
     float: none;
     text-align: center;
     padding-left: 50px;
+    font-size: 15px;
+  }
+
+  #about-me-header {
+    top: 85px;
+    font-size: 2em;
+  }
+
+  #about-me-profile-pic{
+  left: 50px;
+  }
+
+  #about-me-window {
+    width: 380px;
+    left: 280px;
+    top: 150px;
+  }
+
+  #about-me-inner-window {
+    width: 330px;
+    font-size: 15px;
+  }
+
+  #skills-outer-window {
+    width: 460px;
+    left: 200px;
+   height: 200px;
+  }
+
+  #skills {
+    width: 440px;
+   height: 180px;
+  }
+
+  #skills-list {
+    width: 350px;
+   margin-top: 10px;
+    font-size: 12px;
+  }
+
+  #findme-card-1{
+    height: 70px;
+    width: 70px;
+ left: 60px;
+ bottom: 250px;
+  }
+  #findme-card-1 img {
+    height: 50px;
+    width: 50px;
+  }
+  #findme-card-2{
+    height: 70px;
+    width: 70px;
+ left: 60px;
+ bottom: 150px;
+  }
+  #findme-card-2 img {
+    height: 50px;
+    width: 50px;
+  }
+
+  #contact-header {
+    font-size: 2.5em;
+    left: 20px;
+  }
+  #contact-card-1 {
+    left: 60px;
+    bottom: 450px;
+  }
+  #contact-card-1 img {
+    height: 65px;
+    width: 65px;
+  }
+  
+  #contact-card-2 {
+    left: 240px;
+    bottom: 350px;
+  }
+  #contact-card-2 img {
+    height: 65px;
+    width: 65px;
   }
  
+  
+  #contact-card-3 {
+    right: 730px;
+    bottom: 420px;
+  }
+
+  #contact-card-3 img {
+    height: 130px;
+    width: auto;
+  }
+  .contact-card {
+    height: 90px;
+    width: 90px;
+  }
 }
