@@ -2,6 +2,11 @@ body {
   background-color: rgb(48, 48, 48);
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #wrapper {
   margin: 0 auto;
   width: 1290px;
@@ -248,6 +253,17 @@ body {
   }
 }
 
+@keyframes groundPosition2 {
+  0%{
+    transform: translateY(-45px);
+    
+  }
+  100%{
+    transform: translateY(-175px);
+    
+  }
+}
+
 @keyframes groundUp {
   100%{
     transform: translateY(-710px)
@@ -281,6 +297,24 @@ body {
   }
 }
 
+@keyframes groundUp5 {
+  0%{
+    transform: translateY(-175px);
+  }
+  100%{
+    transform: translateY(-740px)
+  }
+}
+
+@keyframes groundUp6 {
+  0%{
+    transform: translateY(4800px)
+  }
+  100%{
+    transform: translateY(-740px)
+  }
+}
+
 @keyframes groundDown {
   0%{
     transform: translateY(-710px)
@@ -296,6 +330,24 @@ body {
   }
   100%{
     transform: translateY(-50px)
+  }
+}
+
+@keyframes groundDown3 {
+  0%{
+    transform: translateY(-740px);
+  }
+  100%{
+    transform: translateY(-175px);
+  }
+}
+
+@keyframes groundDown4 {
+  0%{
+    transform: translateY(-740px);
+  }
+  100%{
+    transform: translateY(900px);
   }
 }
 
@@ -452,6 +504,7 @@ body {
   left: 50px;
   top: 50px;
   font-size: 3em;
+  z-index: 12;
 }
 
 #about-me-window {
@@ -1196,6 +1249,72 @@ z-index: 1;
   }
 }
 
+@keyframes treeMyWorkToContact4 {
+  0%{
+    transform: translate(-2080px, -1930px) scale(.25);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2025px, -2530px) scale(.37);
+    filter: blur(6px);
+  }
+}
+
+@keyframes treeMyWorkToAboutMe4 {
+  0%{
+    transform: translate(-2080px, -1930px) scale(.25);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-1875px, 1700px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeAboutMeToContacts4 {
+  0%{
+    transform: translate(-2025px, 3000px) scale(.305);
+    filter: blur(0px);
+  }
+  100%{
+    transform: translate(-2025px, -2530px) scale(.37);
+    filter: blur(6px);
+  }
+}
+
+@keyframes treeAboutMeToMyWork4 {
+  0%{
+    transform: translate(-2080px, 1700px) scale(.3);
+    filter: blur(0px);
+  }
+  100% {
+    transform: translate(-2080px, -1930px) scale(.25);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToMyWork4 {
+  0%{
+    transform: translate(-2025px, -2530px) scale(.37);
+    filter: blur(6px);
+  }
+  100%{
+    transform: translate(-2080px, -1930px) scale(.25);
+    filter: blur(0px);
+  }
+}
+
+@keyframes treeContactToAboutMe4 {
+  0%{
+    transform: translate(-2025px, -2530px) scale(.37);
+    filter: blur(6px);
+  }
+  100%{
+    transform: translate(-2025px, -1000px) scale(.305);
+    filter: blur(0px);
+  }
+}
+
 
 #portfolio-header{
   font-family: 'Nunito Sans', sans-serif;
@@ -1205,6 +1324,8 @@ z-index: 1;
   font-size: 3em;
   opacity: 0;
 }
+
+
 
 .project-card {
   position: relative;
@@ -1412,6 +1533,7 @@ z-index: 1;
   left: 50px;
   top: 0px;
   font-size: 3em;
+  z-index: 12;
 }
 
 
@@ -1630,8 +1752,11 @@ z-index: 1;
 
   #tree {
     transform: translate(-900px, -1850px) scale(1.7);
-    
+  
   }
+
+
+
 
   #nav {
     margin-right: 275px;
@@ -1773,6 +1898,8 @@ z-index: 1;
   #tree {
     transform: translate(-1150px, -1850px) scale(1.5);
   }
+
+
 
   #nav {
     margin-right: 380px;
