@@ -74,9 +74,9 @@ For screen size less then or equal to 920 && greater than 420
     Contact -> My Work ✓
     Contact ->  About Me ✓
 
-For screen size less then or equal to 420
+For screen size less then 500
     
-    main -> My work 
+    main -> My work ✓
     main -> About me
     main -> Contact
 
@@ -214,21 +214,27 @@ function mainToMyWork() {
   document.getElementById("cloud4").style.animation = "floatRight1 220s linear 1s forwards";
   document.getElementById("cloud5").style.animation = "floatRight1 200s linear 1s forwards";
   var ele = document.getElementsByClassName('nav-button');
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animation = "paddingChange 2s forwards";
-  }
+ 
   if (viewportWidth > 1250) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 2s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink 1s ease-in forwards";
     document.getElementById("tree").style.animation = "treeMainToMyWork 2s ease-out normal forwards";
 
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
-    nav.classList.add("med-large-nav");
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 2s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink2 1s ease-in forwards";
     document.getElementById("tree").style.animation = "treeMainToMyWork2 2s ease-out normal forwards";
 
   }
   if (viewportWidth <= 1060 && viewportWidth > 950) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 2s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink3 1s ease-in forwards";
     document.getElementById("tree").style.animation = "treeMainToMyWork3 2s ease-out normal forwards";
     document.getElementById("forest-ground").style.animation = "groundPosition 2s ease-out normal forwards";
@@ -236,7 +242,7 @@ function mainToMyWork() {
 
   if (viewportWidth <= 950 && viewportWidth > 599) {
     for (var i = 0; i < ele.length; i++) {
-      ele[i].style.animation = "paddingChange 1.5s forwards";
+      ele[i].style.animation = "paddingChange 2s forwards";
     }
     document.getElementById("nav").style.animation = "navShrink4 1s ease-in forwards";
     document.getElementById("tree").style.animation = "treeMainToMyWork4 2s ease-out normal forwards";
@@ -244,8 +250,15 @@ function mainToMyWork() {
     document.getElementById("nav-list").style.animation = "shrinkHeight2 1s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundPosition2 2s ease-out normal forwards";
   }
-  if (viewportWidth <= 620) {
-    // code here
+  if (viewportWidth <= 500) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange2 2s forwards";
+    }
+    document.getElementById("nav").style.animation = "navShrinkMobile 2s ease-in forwards";
+    document.getElementById("tree").style.animation = "treeMainToMyWork5 2s ease-out normal forwards";
+    document.getElementById("nav").style.borderLeft = "none";
+    document.getElementById("nav").style.textAlign = "center";
+    document.getElementById("forest-ground").style.animation = "groundPosition2 2s ease-out normal forwards";
   }
 }
 
@@ -279,19 +292,26 @@ function mainToAboutMe() {
   document.getElementById("cloud4").style.animation = "floatRight1 220s linear 4s forwards";
   document.getElementById("cloud5").style.animation = "floatRight1 200s linear 4s forwards";
   var ele = document.getElementsByClassName('nav-button');
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animation = "paddingChange 1.5s forwards";
-  }
+
   if (viewportWidth > 1250) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink 1s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToAboutMe 3.5s ease-out normal forwards";
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     nav.classList.add("med-large-nav");
     document.getElementById("nav").style.animation = "navShrink2 1s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToAboutMe2 3.5s ease-out normal forwards";
   }
   if (viewportWidth <= 1060 && viewportWidth > 950) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink3 1s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToAboutMe3 3.5s ease-out normal forwards";
   }
@@ -304,6 +324,9 @@ function mainToAboutMe() {
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("nav-list").style.animation = "shrinkHeight2 1s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToAboutMe4 3.5s ease-out normal forwards";
+  }
+  if (viewportWidth <= 500) {
+    // code here
   }
 }
 
@@ -357,7 +380,7 @@ function mainToContact() {
     document.getElementById("nav-list").style.animation = "shrinkHeight2 .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp4 2s ease-out normal forwards";
   }
-  if (viewportWidth <= 600) {
+  if (viewportWidth <= 500) {
     // code here
   }
 }
@@ -404,7 +427,7 @@ function myWorkToAboutMe() {
     document.getElementById("tree").style.animation = "treeMyWorkToAboutMe4 .6s ease-in forwards";
     document.getElementById("forest-ground").style.animation = "fadeOut .1s normal forwards";
   }
-  if (viewportWidth <= 620) {
+  if (viewportWidth <= 500) {
     // code here
   }
 }
@@ -465,7 +488,7 @@ function myWorkToContact() {
 
     document.getElementById("forest-ground").style.animation = "groundUp5 2s ease-in-out normal forwards";
   }
-  if (viewportWidth <= 620) {
+  if (viewportWidth <= 500) {
     // code here
   }
 }
@@ -525,7 +548,7 @@ function contactToAboutMe() {
     document.getElementById("tree").style.animation = "treeContactToAboutMe4 1s linear forwards";
     document.getElementById("forest-ground").style.animation = "groundDown4 1s linear forwards";
   }
-  if (viewportWidth <= 620) {
+  if (viewportWidth <= 500) {
     // code here
   }
   for (var i = 0; i < ele.length; i++) {
@@ -580,7 +603,7 @@ function contactToMyWork() {
     document.getElementById("tree").style.animation = "treeContactToMyWork4 2s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundDown3 2s ease-in-out forwards";
   }
-  if (viewportWidth <= 620) {
+  if (viewportWidth <= 500) {
     // code here
   }
 }
@@ -680,12 +703,15 @@ function aboutMeToContacts() {
   if (viewportWidth <= 950 && viewportWidth > 620) {
     document.getElementById("tree").style.animation = "treeAboutMeToContacts4 6s ease-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp6 6s ease-out forwards";
-  } if (viewportWidth <= 620) {
+  }   if (viewportWidth <= 500) {
     // code here
   }
 
 }
 
 function resize(){
-  // add code here
+  if(pagePosition != "Main"){
+    location.reload();
+  }
+  
 }

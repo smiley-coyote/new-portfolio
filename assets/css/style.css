@@ -390,8 +390,17 @@ body a {
 @keyframes navShrink5 {
 
   100%{
-    transform: scale(.65) translate(300px, -250px);
+    transform: scale(.65) translate(200px, -240px);
     color: black;
+  }
+}
+
+@keyframes navShrinkMobile {
+
+  100%{
+    transform: scale(.7) translate(0px, -150px);
+    color: black;
+    height: 50px;
   }
 }
 
@@ -468,6 +477,13 @@ body a {
     padding: 10px;
   }
 }
+
+@keyframes paddingChange2 {
+  100%{
+    padding: 15px;
+  }
+}
+
 
 #about-me{
   position: relative;
@@ -1311,6 +1327,16 @@ z-index: 1;
   }
   100%{
     transform: translate(-2025px, -1000px) scale(.305);
+    filter: blur(0px);
+  }
+}
+/* for screen size less than 500 */
+@keyframes treeMainToMyWork5 {
+  0%{
+    transform: translate(-1825px, -2000px) scale(1.2);
+  }
+  100%{
+    transform: translate(-2225px, -1930px) scale(.22);
     filter: blur(0px);
   }
 }
@@ -2257,4 +2283,43 @@ z-index: 1;
     height: 90px;
     width: 90px;
   }
+}
+
+@media only screen and (max-width: 499px){
+  #wrapper {
+    width: 450px;
+  }
+  #portfolio-header {
+    top: 30px;
+    left: 295px;
+  }
+.first-card {
+  left: 270px;
+  top: 230px;
+}
+.second-card {
+top: 140px;
+right: -480px;
+}
+
+.third-card {
+  top: 160px;
+  left: 270px;
+}
+
+.fourth-card {
+  top: 75px;
+  left: 480px;
+}
+
+.fifth-card {
+  bottom: -100px;
+  left: 280px;
+}
+
+.sixth-card {
+  top: 12px;
+  left: 480px;
+}
+  
 }
