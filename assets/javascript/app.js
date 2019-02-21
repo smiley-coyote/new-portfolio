@@ -769,7 +769,7 @@ function aboutMeToContacts() {
 
 function resize(){
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  if(pagePosition != "Main" && (viewportWidth > originalWidth + 50) || viewportWidth < originalWidth - 50) {
+  if(pagePosition !== "Main" && ((viewportWidth > originalWidth + 200) || viewportWidth < originalWidth - 200)) {
     location.reload();
   }
   
