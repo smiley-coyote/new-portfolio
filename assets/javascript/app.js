@@ -1,6 +1,8 @@
 var pagePosition = "Main";
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-console.log(viewportWidth);
+var originalWidth = 0;
+var screenSizeCheck = false;
+
 // var nav = document.getElementById("nav");
 // var tree = document.getElementById("tree");
 /* 
@@ -111,6 +113,15 @@ ENTER
 
 
 */
+
+checkScreenSize();
+
+function checkScreenSize() {
+if(screenSizeCheck === false){
+  originalWidth = window.innerWidth || document.documentElement.clientWidth;
+  screenSizeCheck = true;
+}
+}
 
 function navButton(x) {
   var p = pagePosition;
@@ -757,8 +768,10 @@ function aboutMeToContacts() {
 }
 
 function resize(){
-  if(pagePosition != "Main"){
+  viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  if(pagePosition != "Main" && (viewportWidth > originalWidth + 50) || viewportWidth < originalWidth - 50) {
     location.reload();
   }
   
 }
+
