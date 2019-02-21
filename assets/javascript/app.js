@@ -77,17 +77,17 @@ For screen size less then or equal to 920 && greater than 420
 For screen size less then 500
     
     main -> My work ✓
-    main -> About me
-    main -> Contact
+    main -> About me ✓
+    main -> Contact ✓
 
-    My Work -> About me
-    My Work -> Contact
+    My Work -> About me ✓
+    My Work -> Contact ✓
 
-    About me -> Contact
-    About me -> My Work
+    About me -> Contact ✓
+    About me -> My Work ✓
 
-    Contact -> My Work
-    Contact ->  About Me
+    Contact -> My Work ✓
+    Contact ->  About Me ✓
 
 
 ===========================
@@ -202,7 +202,6 @@ function mainToMyWork() {
   document.getElementById("tree-bark").style.display = "none";
   document.getElementById("nav-mywork").style.color = "yellow";
   // document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
-
   document.getElementById("portfolio").style.display = "block";
   document.getElementById("portfolio").style.animation = "fadeIn 2s linear 2s forwards";
   document.getElementById("grass").style.animation = "grassShrinkMoveOut 1s forwards running";
@@ -326,7 +325,14 @@ function mainToAboutMe() {
     document.getElementById("tree").style.animation = "treeMainToAboutMe4 3.5s ease-out normal forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange2 2s forwards";
+    }
+    document.getElementById("nav").style.animation = "navShrinkMobile 2s ease-in forwards";
+    document.getElementById("tree").style.animation = "treeMainToAboutMe5 3.5s ease-out normal forwards";
+    document.getElementById("nav").style.borderLeft = "none";
+    document.getElementById("nav").style.textAlign = "center";
+
   }
 }
 
@@ -351,37 +357,52 @@ function mainToContact() {
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 2s running";
   document.getElementById("contact").style.display = "block";
   var ele = document.getElementsByClassName('nav-button');
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animation = "paddingChange 1.5s forwards";
-  }
+
 
   if (viewportWidth > 1250) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrinkContacts 2s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToContact 2s ease-out normal forwards";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-out normal forwards";
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
-    nav.classList.add("med-large-nav");
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrinkContacts1250 2s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToContact2 2s ease-out normal forwards";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-out normal forwards";
   }
   if (viewportWidth <= 1060 && viewportWidth > 950) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrinkContacts1060 2s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToContact3 2s ease-out normal forwards";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-out normal forwards";
   }
   if (viewportWidth <= 950 && viewportWidth > 600) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.animation = "navShrink4 2s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToContact4 2s ease-out normal forwards";
     document.getElementById("nav-list").style.animation = "shrinkHeight2 .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp4 2s ease-out normal forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange2 2s forwards";
+    }
+    document.getElementById("nav").style.animation = "navShrinkMobile 2s ease-in forwards";
+    document.getElementById("forest-ground").style.animation = "groundUp4 2s ease-out normal forwards";
+    document.getElementById("tree").style.animation = "treeMainToContact5 2s ease-out normal forwards";
+    document.getElementById("nav").style.textAlign = "center";
   }
 }
 
@@ -428,7 +449,8 @@ function myWorkToAboutMe() {
     document.getElementById("forest-ground").style.animation = "fadeOut .1s normal forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    document.getElementById("tree").style.animation = "treeMyWorkToAboutMe5 .6s ease-in forwards";
+    document.getElementById("forest-ground").style.animation = "fadeOut .1s normal forwards";
   }
 }
 
@@ -457,10 +479,11 @@ function myWorkToContact() {
 
   
   var ele = document.getElementsByClassName('nav-button');
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animation = "paddingChange 1.5s forwards";
-  }
+
   if (viewportWidth > 1250) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMyWorkToContact 2s ease-in-out forwards";
@@ -469,6 +492,9 @@ function myWorkToContact() {
     
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     nav.classList.add("med-large-nav");
@@ -477,6 +503,9 @@ function myWorkToContact() {
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-in-out normal forwards";
   }
   if (viewportWidth <= 1060 && viewportWidth > 950) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMyWorkToContact3 2s ease-in-out forwards";
@@ -484,12 +513,17 @@ function myWorkToContact() {
     document.getElementById("forest-ground").style.animation = "groundUp3 2s ease-in-out normal forwards";
   }
   if (viewportWidth <= 950 && viewportWidth > 620) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animation = "paddingChange 1.5s forwards";
+    }
     document.getElementById("tree").style.animation = "treeMyWorkToContact4 2s ease-in-out forwards";
 
     document.getElementById("forest-ground").style.animation = "groundUp5 2s ease-in-out normal forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    document.getElementById("tree").style.animation = "treeMyWorkToContact5 2s ease-in-out forwards";
+
+    document.getElementById("forest-ground").style.animation = "groundUp5 2s ease-in-out normal forwards";
   }
 }
 
@@ -524,6 +558,7 @@ function contactToAboutMe() {
   document.getElementById("wrapper").style.animation = "toSkyBlue 2s linear 2s forwards";
 
   if (viewportWidth > 1250) {
+    
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out reverse forwards";
     document.getElementById("nav").style.borderLeft = "8px solid black";
     document.getElementById("tree").style.animation = "treeContactToAboutMe 1s linear forwards";
@@ -549,11 +584,10 @@ function contactToAboutMe() {
     document.getElementById("forest-ground").style.animation = "groundDown4 1s linear forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    document.getElementById("tree").style.animation = "treeContactToAboutMe5 1s linear forwards";
+    document.getElementById("forest-ground").style.animation = "groundDown4 1s linear forwards";
   }
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animation = "paddingChange 1.5s reverse forwards";
-  }
+ 
 
 
 
@@ -604,7 +638,8 @@ function contactToMyWork() {
     document.getElementById("forest-ground").style.animation = "groundDown3 2s ease-in-out forwards";
   }
   if (viewportWidth <= 500) {
-    // code here
+    document.getElementById("tree").style.animation = "treeContactToMyWork5 2s ease-in-out forwards";
+    document.getElementById("forest-ground").style.animation = "groundDown3 2s ease-in-out forwards";
   }
 }
 
@@ -650,7 +685,8 @@ function aboutMeToMyWork() {
     document.getElementById("forest-ground").style.animation = "groundPosition2 1s ease-out 3s forwards";
   }
   if (viewportWidth <= 620) {
-    // code here
+    document.getElementById("tree").style.animation = "treeAboutMeToMyWork5 4s ease-out forwards";
+    document.getElementById("forest-ground").style.animation = "groundPosition2 1s ease-out 3s forwards";
   }
 }
 
@@ -676,10 +712,11 @@ function aboutMeToContacts() {
   document.getElementById("wrapper").style.animation = "toLighterBlue 4.5s linear forwards";
   document.getElementById("forest-image").style.animation = "forestFromAboutMeToContact 6s linear forwards";
   var ele = document.getElementsByClassName('nav-button');
-  for (var i = 0; i < ele.length; i++) {
-    ele[i].style.animationPlayState = "running";
-  }
+
   if (viewportWidth > 1250) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animationPlayState = "running";
+    }
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("tree").style.animation = "treeAboutMeToContacts 6s ease-out forwards";
@@ -687,6 +724,9 @@ function aboutMeToContacts() {
     document.getElementById("forest-ground").style.animation = "groundUp2 6s ease-out forwards";
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animationPlayState = "running";
+    }
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("tree").style.animation = "treeAboutMeToContacts2 6s ease-out forwards";
@@ -694,6 +734,9 @@ function aboutMeToContacts() {
     document.getElementById("forest-ground").style.animation = "groundUp2 6s ease-out forwards";
   }
   if (viewportWidth <= 1060 && viewportWidth > 950) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animationPlayState = "running";
+    }
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("nav").style.borderLeft = "none";
     document.getElementById("tree").style.animation = "treeAboutMeToContacts3 6s ease-out forwards";
@@ -701,10 +744,14 @@ function aboutMeToContacts() {
     document.getElementById("forest-ground").style.animation = "groundUp2 6s ease-out forwards";
   }
   if (viewportWidth <= 950 && viewportWidth > 620) {
+    for (var i = 0; i < ele.length; i++) {
+      ele[i].style.animationPlayState = "running";
+    }
     document.getElementById("tree").style.animation = "treeAboutMeToContacts4 6s ease-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp6 6s ease-out forwards";
   }   if (viewportWidth <= 500) {
-    // code here
+    document.getElementById("tree").style.animation = "treeAboutMeToContacts5 6s ease-out forwards";
+    document.getElementById("forest-ground").style.animation = "groundUp6 6s ease-out forwards";
   }
 
 }
