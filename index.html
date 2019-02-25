@@ -12,19 +12,28 @@
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Nanum+Gothic|Nunito|Oxygen|Poppins|Quicksand|Titillium+Web|Ubuntu|Work+Sans"
     rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Nicholas Alex Portfolio</title>
 </head>
 
 <body onresize="resize()">
 
   <div id="wrapper">
+      <div id="front-page">
+        <div id="content-here">
+        </div>
+        <div id="content-here2">
+          <h1>Hello! My name is Nicholas Alex</h1>
+          <p>I am a Full Stack Web Developer</p>
+          <button id="enter-button" onclick=enterSite()>Enter</button>
+        </div>
+        <div id="run-button"><button id="run-btn" onclick=runButton()>RUN!</button></div>
+      </div>
     <div id="forest-image">
 
     </div>
     <div class="content">
-      <!-- <div id="front-page">
-         will display first
-      </div> -->
+
 
       <div id="main-header">
         <div class="border-box">
@@ -59,9 +68,9 @@
       </div>
       <div id="butterfly">
         <div id="butterfly1">
-          <img src="assets/images/butterfly1.png" />
+          <img id="frame-1" src="assets/images/butterfly1.png" />
         </div>
-        <div id="butterfly2">
+        <div id="frame-2" id="butterfly2">
           <img src="assets/images/butterfly2.png" />
         </div>
       </div>

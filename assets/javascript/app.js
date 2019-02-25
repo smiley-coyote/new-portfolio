@@ -113,21 +113,130 @@ ENTER
 
 
 */
+// front page code
+var str1 = "<h1>Hello! My name is Nicholas Alex</h1>";
+var str2 = "<p>I am a Full Stack Web Developer!</p>";
+var str3 = "<button>Enter</button>";
+var newArr = str1.split("");
+var number = 0;
+var isElement = false;
+var typing;
+var completedHeading = false;
+var completedParagraph = false;
+var d = new Date();
+var currentDate = d.getTime();
+sessionStorage.setItem("visited", "");
+
+frontPage(); 
+
+function frontPage(){
+  var website= sessionStorage.getItem("visited");
+  console.log(website)
+  if(website === ""){
+    document.getElementById("front-page").style.display = "block";
+    typing = setInterval(checkItem, 60);
+  }
+  else {
+    document.getElementById("butterfly").style.animationPlayState = "running";
+    document.getElementById("frame-1").style.animationPlayState = "running";
+    document.getElementById("frame-2").style.animationPlayState = "running";
+    document.getElementById("grass").style.animationPlayState = "running";
+    document.getElementById("grass2").style.animationPlayState = "running";
+  }
+}
+
+function checkItem() {
+  if (number <= newArr.length) {
+    if (newArr[number] === "<") {
+      isElement = true;
+      myFunction2();
+    }
+    if (newArr[number] === ">") {
+      $("#content-here").append("<span>" + newArr[number]);
+      isElement = false;
+      number++;
+    }
+    else {
+      myFunction2();
+    }
+  } else {
+    if (completedHeading === false && completedParagraph === false) {
+      console.log("completed")
+      clearInterval(typing);
+      $("#content-here").append("<br>");
+      newArr = str2.split("");
+      number = 0;
+      typing = setInterval(checkItem, 60);
+      completedHeading = true;
+    } 
+    else if(completedHeading === true && completedParagraph === false){
+      console.log("completed2")
+      clearInterval(typing);
+      $("#content-here").append("<br>");
+      newArr = str3.split("");
+      number = 0;
+      typing = setInterval(checkItem, 60);
+      completedParagraph = true;
+    }
+    
+    else {
+      console.log("completed3")
+      clearInterval(typing);
+      document.getElementById("run-button").style.display = "block";
+    }
+
+  }
+}
+
+function myFunction2() {
+  if (isElement === true) {
+    $("#content-here").append("<span>" + newArr[number]);
+    number++;
+  } else {
+    $("#content-here").append(newArr[number]);
+    number++;
+  }
+
+}
+
+function runButton(){
+  document.getElementById("run-button").style.display = "none";
+  document.getElementById("content-here").style.display = "none";
+  document.getElementById("content-here2").style.display = "block";
+}
+
+function enterSite() {
+  document.getElementById("content-here").style.display = "none";
+  document.getElementById("front-page").style.animation = "fadeOut 1s linear forwards";
+  document.getElementById("butterfly").style.animationPlayState = "running";
+  document.getElementById("frame-1").style.animationPlayState = "running";
+  document.getElementById("frame-2").style.animationPlayState = "running";
+  document.getElementById("grass").style.animationPlayState = "running";
+  document.getElementById("grass2").style.animationPlayState = "running";
+  document.getElementById("enter-button").style.display = "none";
+  setTimeout(pageStart, 1000);
+}
+
+function pageStart() {
+  sessionStorage.setItem("visited", "yes")
+  document.getElementById("front-page").style.display = "none";
+}
+// end of front page code
 
 checkScreenSize();
 
 function checkScreenSize() {
-if(screenSizeCheck === false){
-  originalWidth = window.innerWidth || document.documentElement.clientWidth;
-  screenSizeCheck = true;
-}
+  if (screenSizeCheck === false) {
+    originalWidth = window.innerWidth || document.documentElement.clientWidth;
+    screenSizeCheck = true;
+  }
 }
 
 function navButton(x) {
   var p = pagePosition;
   var goTo = new Function('a', 'b', 'return a + "To" + b');
   var navigate = goTo(p, x);
-  
+
 
 
 
@@ -200,7 +309,7 @@ function navButton(x) {
 }
 
 function mainToMyWork() {
-  
+
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   pagePosition = "MyWork";
   document.getElementById("main-header").style.zIndex = "-10";
@@ -224,7 +333,7 @@ function mainToMyWork() {
   document.getElementById("cloud4").style.animation = "floatRight1 220s linear 1s forwards";
   document.getElementById("cloud5").style.animation = "floatRight1 200s linear 1s forwards";
   var ele = document.getElementsByClassName('nav-button');
- 
+
   if (viewportWidth > 1250) {
     for (var i = 0; i < ele.length; i++) {
       ele[i].style.animation = "paddingChange 2s forwards";
@@ -359,7 +468,7 @@ function mainToContact() {
   document.getElementById("tree-bark").style.display = "none";
   document.getElementById("nav-contact").style.color = "yellow";
 
-  
+
   document.getElementById("nav").style.animation = "fadeOut .5s ease-in-out forwards";
 
 
@@ -488,7 +597,7 @@ function myWorkToContact() {
   document.getElementById("contact").style.display = "block";
 
 
-  
+
   var ele = document.getElementsByClassName('nav-button');
 
   if (viewportWidth > 1250) {
@@ -500,7 +609,7 @@ function myWorkToContact() {
     document.getElementById("tree").style.animation = "treeMyWorkToContact 2s ease-in-out forwards";
     document.getElementById("nav").style.animation = "navShrinkContacts2 2s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-in-out normal forwards";
-    
+
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
     for (var i = 0; i < ele.length; i++) {
@@ -569,7 +678,7 @@ function contactToAboutMe() {
   document.getElementById("wrapper").style.animation = "toSkyBlue 2s linear 2s forwards";
 
   if (viewportWidth > 1250) {
-    
+
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out reverse forwards";
     document.getElementById("nav").style.borderLeft = "8px solid black";
     document.getElementById("tree").style.animation = "treeContactToAboutMe 1s linear forwards";
@@ -598,7 +707,7 @@ function contactToAboutMe() {
     document.getElementById("tree").style.animation = "treeContactToAboutMe5 1s linear forwards";
     document.getElementById("forest-ground").style.animation = "groundDown4 1s linear forwards";
   }
- 
+
 
 
 
@@ -716,7 +825,7 @@ function aboutMeToContacts() {
   document.getElementById("clouds-layer2").style.animation = "allcloudsmoveup 3s linear forwards";
   document.getElementById("clouds-layer3").style.animation = "allcloudsmoveup 4s linear forwards";
 
-  
+
   document.getElementById("contact").style.animation = "fadeIn 2s forwards 6s running";
   document.getElementById("contact").style.display = "block";
 
@@ -760,18 +869,18 @@ function aboutMeToContacts() {
     }
     document.getElementById("tree").style.animation = "treeAboutMeToContacts4 6s ease-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp6 6s ease-out forwards";
-  }   if (viewportWidth <= 500) {
+  } if (viewportWidth <= 500) {
     document.getElementById("tree").style.animation = "treeAboutMeToContacts5 6s ease-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp6 6s ease-out forwards";
   }
 
 }
 
-function resize(){
+function resize() {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  if(pagePosition !== "Main" && ((viewportWidth > originalWidth + 200) || viewportWidth < originalWidth - 200)) {
+  if (pagePosition !== "Main" && ((viewportWidth > originalWidth + 200) || viewportWidth < originalWidth - 200)) {
     location.reload();
   }
-  
+
 }
 

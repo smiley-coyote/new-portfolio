@@ -7,6 +7,8 @@ body a {
   color: inherit;
 }
 
+
+
 #wrapper {
   margin: 0 auto;
   width: 1290px;
@@ -28,24 +30,130 @@ body a {
   overflow: hidden;
 }
 
+#front-page {
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 0px;
+  width: 100%;
+  height: 800px;
+  background-color: rgb(48, 48, 48);
+  z-index: 9999;
+  color: white;
+  display: none;
+}
+
+#content-here2 {
+  display: none;
+  text-align: center;
+  position: relative;
+  height: 600px;
+  width: 500px;
+  margin: 15% auto;
+}
+
+#content-here2 h1{
+  font-size: 2em;
+  text-align: center;
+}
+#content-here2 p {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+#content-here2 button {
+  position: relative;
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  margin: 25px auto;
+}
+
+#content-here2 button:hover{
+  cursor: pointer;
+}
+#run-button {
+  display: none;
+  position: absolute;
+  left: 850px;
+  bottom: 300px;
+  border-radius: 5px;
+  background-color: rgb(230, 230, 230);
+}
+
+#run-btn{
+  text-align: center;
+  
+  background: linear-gradient(to right, rgb(255, 53, 53) 12.5%, rgb(255, 135, 54) 25%, rgb(255, 242, 53) 37.5%, rgb(104, 255, 104) 50%,
+  rgb(54, 248, 248) 62.5%, rgb(97, 121, 255) 75%, rgb(250, 96, 255) 87.5%, rgb(255, 78, 211) 100%);
+  background-size: 200% auto;
+  
+  color: #000;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: shine 4s linear reverse infinite;
+
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+
+#run-button button {
+  font-size: 20px;
+  font-weight: 500;
+  width: 100px;
+  height: 30px; 
+  border-radius: 5px;
+}
+
+#run-button button:hover{
+  cursor: pointer;
+}
+
+
+#content-here {
+  font-size: 25px;
+  position: relative;
+  
+  height: 600px;
+  width: 500px;
+  margin: 15% auto;
+}
+
+
+#content-here span {
+  color: rgb(82, 82, 224);
+}
+
 .content {
   position: relative;
   width: 1290px;
   height: 800px;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 999;
   margin-left: 20px;
   margin-right: 20px;
 }
 
-#front-page {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(42, 27, 49);
-  z-index: 0;
-}
+
 
 #forest-image{
   height: 850px;
@@ -740,7 +848,7 @@ z-index: 1;
 
 #butterfly {
   position: absolute;
-  animation: flying 8s linear forwards running;
+  animation: flying 8s linear forwards paused;
   transform: translateZ(0);
   /* animation: flying 8s linear paused; */
 }
@@ -791,14 +899,16 @@ z-index: 1;
 
 }
 
-#butterfly1 img{
+#frame-1{
   opacity: 1;
-  animation: wingflap .5s linear infinite running;
+  animation: wingflap .5s linear infinite paused;
+  transform: translateZ(0);
 }
 
-#butterfly2 img{
+#frame-2{
   opacity: 0;
-  animation: wingflap2 .5s linear infinite running;
+  animation: wingflap2 .5s linear infinite paused;
+  transform: translateZ(0);
 }
 
 @keyframes wingflap {
@@ -839,14 +949,14 @@ z-index: 1;
   position: absolute;
   /* opacity: 0; */
   transform: translateY(200px);
-  animation: grassWind 12s forwards infinite alternate running;
+  animation: grassWind 12s forwards infinite alternate paused;
 }
 
 #grass2 {
   /* opacity: 0; */
   position: absolute;
   transform: translate(0px, 200px);
-  animation: grassWind2 8s forwards infinite alternate running;
+  animation: grassWind2 8s forwards infinite alternate paused;
 }
 
 #grass3 {
