@@ -13,9 +13,9 @@ body a {
   margin: 0 auto;
   width: 1290px;
   height: 800px;
-  
+  /* background-color: white; */
  
-  background: #B4FAFF;
+  
   
   /* font-family: 'Poppins', sans-serif;
   font-family: 'Ubuntu', sans-serif;
@@ -42,13 +42,103 @@ body a {
   display: none;
 }
 
+#front-page-content {
+  position: relative;
+  width: 60%;
+  height: 400px;
+  margin: 50px auto;
+}
+
 #content-here2 {
   display: none;
   text-align: center;
   position: relative;
-  height: 600px;
+  height: 500px;
   width: 500px;
   margin: 15% auto;
+}
+
+#front-page-main-heading {
+  color: white;
+  position: absolute;
+  font-weight: 600;
+  width: 450px;
+  left: 63%;
+  top: 22%;
+  display: none;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  animation: transitionToHeading 2s ease-in-out .5s forwards paused;
+  z-index: 9999999;
+}
+
+#bottom-border {
+  position: absolute;
+  left: 50px;
+ width: 0px;
+  height: 40px;
+  border-bottom: 2px solid black;
+  animation: growWide 1s ease-in-out 1.5s forwards paused;
+  
+}
+
+
+@keyframes turnToBlack {
+  0%{
+    left: 25%;
+    top: 15%;
+  }
+  100%{
+    color: black;
+    left: 25%;
+    top: 15%;
+  }
+}
+@keyframes growWide {
+  100%{
+    width: 300px;
+  }
+}
+
+#heading-first{
+  animation: floatLeft 1s ease-out .5 forwards paused;
+}
+
+#paragraph-first{
+  animation: floatRight 1s ease-out .5 forwards paused;
+}
+
+@keyframes floatLeft {
+  100%{
+    transform: translateX(-15%);
+  }
+}
+
+@keyframes floatRight {
+  100%{
+    transform: translateX(15%);
+  }
+}
+
+
+@keyframes transitionToHeading {
+  100%{
+    left: 25%;
+    top: 15%;
+  }
+}
+
+
+#heading-first{
+  font-size: 2em;
+  text-align: center;
+}
+
+#paragraph-first{
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 25px;
 }
 
 #content-here2 h1{
@@ -61,24 +151,59 @@ body a {
   margin-bottom: 10px;
   font-size: 25px;
 }
-#content-here2 button {
+#content-hidden-text {
+  font-size: 15px !important;
+  visibility: hidden;
+}
+#enter-button {
   position: relative;
   font-size: 20px;
   width: 100px;
   height: 30px;
   margin: 25px auto;
+  background-color: transparent;
+  animation: textColorChange 10s linear infinite;
 }
 
-#content-here2 button:hover{
+
+
+@keyframes textColorChange{
+  0%{
+    color: white;
+  }
+  25%{
+    color: rgb(121, 255, 121);
+  }
+  50%{
+    color: rgb(255, 255, 91);
+  }
+  75%{
+    color: rgb(68, 253, 253)
+  }
+  100%{
+    color: white;
+  }
+}
+
+#enter-button:hover{
   cursor: pointer;
+  animation: grow .1s linear forwards;
+  color: white;
+}
+
+
+
+#enter-button:hover #content-hidden-text{
+  visibility: visible;
 }
 #run-button {
   display: none;
   position: absolute;
-  left: 850px;
-  bottom: 300px;
+  right: 100px;
+  bottom: 200px;
+  float: right;
   border-radius: 5px;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(255, 255, 255);
 }
 
 #run-btn{
@@ -125,15 +250,19 @@ body a {
 
 #run-button button:hover{
   cursor: pointer;
+  
 }
 
+#run-button:hover {
+  animation: grow .1s linear forwards;
+}
 
 #content-here {
   font-size: 25px;
   position: relative;
   
   height: 600px;
-  width: 500px;
+  width: 480px;
   margin: 15% auto;
 }
 
@@ -142,7 +271,7 @@ body a {
   color: rgb(82, 82, 224);
 }
 
-.content {
+#content {
   position: relative;
   width: 1290px;
   height: 800px;
@@ -151,7 +280,9 @@ body a {
   z-index: 999;
   margin-left: 20px;
   margin-right: 20px;
+  display: none;
 }
+
 
 
 
@@ -165,10 +296,11 @@ body a {
    margin-left: -20px;
    margin-top: -10px;
    z-index: 1;
+   display: none;
  }
 
 #main-header{
-
+visibility: hidden;
   color: black;
   position: relative;
  margin-top: -860px;
@@ -255,8 +387,15 @@ body a {
 }
 
 
-
+/* @keyframes toBlue{
+  100%{
+    background-color: #B4FAFF;;
+  }
+} */
 @keyframes toSkyBlue {
+  0%{
+    background-color: #B4FAFF;
+  }
   100%{
     background-color: rgb(97, 243, 253);
   }
@@ -2267,9 +2406,47 @@ z-index: 1;
 @media only screen and (max-width: 950px) {
 
   #wrapper {
-    width: 700px;
+    width: 800px;
     height:740px;
   }
+#front-page-content{
+  margin-left: 0px;
+  width: 100%;
+}
+
+#run-button{
+  right: 25%;
+}
+
+#content-here{
+  font-size: 20px;
+}
+
+#content-here2 {
+  width: 450px;
+
+}
+#content-here2 p{
+  font-size: 20px;
+}
+#front-page-main-heading {
+  width: 400px;
+}
+#content-here2 h1 {
+  font-size: 1.5em;
+}
+
+#bottom-border {
+  height: 33px;
+}
+
+
+#heading-first {
+ font-size: 1.5em;
+}
+#paragraph-first {
+  font-size: 20px;
+}
 
   #tree {
     transform: translate(-1825px, -2000px) scale(1.2);
@@ -2483,9 +2660,22 @@ z-index: 1;
 }
 
 @media only screen and (max-width: 499px){
- 
+
   #wrapper {
-    width: 450px;
+    width: 400px;
+  }
+  
+  #front-page-main-heading {
+    width: 265px;
+  }
+
+  #content-here2{
+    width: 400px;
+    margin: 0 auto;
+  }
+
+  #run-button{
+    right: 30px;
   }
   #portfolio-header {
     top: 30px;

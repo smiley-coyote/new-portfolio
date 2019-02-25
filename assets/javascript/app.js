@@ -3,116 +3,7 @@ var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
 var originalWidth = 0;
 var screenSizeCheck = false;
 
-// var nav = document.getElementById("nav");
-// var tree = document.getElementById("tree");
-/* 
 
----------------------
-
-
-*******TO DO********
-
-
-Page animations:
-
-For screen size larger than 1250
-    main -> My work ✓
-    main -> About me ✓
-    main -> Contact ✓
-
-    My Work -> About me ✓
-    My Work -> Contact ✓
-
-    About me -> Contact ✓
-    About me -> My Work ✓
-
-    Contact -> My Work ✓
-    Contact ->  About Me ✓
-
-For screen size less then or equal to 1250 && greater than 1130
-    
-    main -> My work ✓
-    main -> About me ✓
-    main -> Contact ✓
-   
-    My Work -> About me ✓
-    My Work -> Contact ✓
-
-    About me -> Contact ✓
-    About me -> My Work ✓
-
-    Contact -> My Work ✓
-    Contact ->  About Me ✓
-
-
-
-For screen size less then or equal to 1060 && greater than 950
-    
-    main -> My work ✓
-    main -> About me ✓
-    main -> Contact ✓
-
-    My Work -> About me ✓
-    My Work -> Contact ✓
-
-    About me -> Contact ✓
-    About me -> My Work ✓
-
-    Contact -> My Work ✓
-    Contact ->  About Me ✓
-
-For screen size less then or equal to 920 && greater than 420
-    
-    main -> My work ✓
-    main -> About me ✓
-    main -> Contact ✓
-
-    My Work -> About me ✓
-    My Work -> Contact ✓
-
-    About me -> Contact ✓
-    About me -> My Work ✓
-
-    Contact -> My Work ✓
-    Contact ->  About Me ✓
-
-For screen size less then 500
-    
-    main -> My work ✓
-    main -> About me ✓
-    main -> Contact ✓
-
-    My Work -> About me ✓
-    My Work -> Contact ✓
-
-    About me -> Contact ✓
-    About me -> My Work ✓
-
-    Contact -> My Work ✓
-    Contact ->  About Me ✓
-
-
-===========================
-
-Create Front Page
-
-ideas: 
-
-1. The following letters types onto the screen
-
-Hello! My name is Nicholas Alex and I am a Full Stack Web Developer
-
-ENTER
-
-
-
-
-
-
---------------------
-
-
-*/
 // front page code
 var str1 = "<h1>Hello! My name is Nicholas Alex</h1>";
 var str2 = "<p>I am a Full Stack Web Developer!</p>";
@@ -128,13 +19,21 @@ var completedParagraph = false;
 frontPage(); 
 
 function frontPage(){
+  var building = "go"
   var website= sessionStorage.getItem("visited");
   console.log(website)
+  // if(website === null)
+  // if(building === "go")
   if(website === null){
     document.getElementById("front-page").style.display = "block";
     typing = setInterval(checkItem, 60);
+    var loadPage = setTimeout(loadContent, 100)
   }
   else {
+    document.getElementById("main-header").style.visibility = "visible";
+    document.getElementById("forest-image").style.display = "block";
+    document.getElementById("content").style.display = "block";
+    document.getElementById("wrapper").style.backgroundColor = "white";
     document.getElementById("butterfly").style.animationPlayState = "running";
     document.getElementById("frame-1").style.animationPlayState = "running";
     document.getElementById("frame-2").style.animationPlayState = "running";
@@ -204,20 +103,44 @@ function runButton(){
 }
 
 function enterSite() {
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth;
+  if(screenWidth > 700){
   document.getElementById("content-here").style.display = "none";
-  document.getElementById("front-page").style.animation = "fadeOut 1s linear forwards";
+  document.getElementById("content-here2").style.display = "none";
+  document.getElementById("enter-button").style.display = "none";
+  document.getElementById("front-page-main-heading").style.display = "block";
+  document.getElementById("front-page-main-heading").style.animationPlayState = "running";
+  document.getElementById("heading-first").style.animationPlayState = "running";
+  document.getElementById("paragraph-first").style.animationPlayState = "running";
+  document.getElementById("bottom-border").style.animationPlayState = "running";
+  document.getElementById("front-page").style.animation = "fadeOut 1s linear 2s forwards";
+  setTimeout(pageStart, 2500);
+  }
+  else{
+    document.getElementById("content-here").style.display = "none";
+    document.getElementById("content-here2").style.display = "none";
+    document.getElementById("enter-button").style.display = "none";
+    document.getElementById("main-header").style.visibility = "visible";
+    document.getElementById("front-page").style.animation = "fadeOut 1s linear forwards";
+    setTimeout(pageStart, 1000);
+  }
+}
+
+function pageStart() {
+  document.getElementById("front-page-main-heading").style.animation = "turnToBlack .5s linear forwards";
   document.getElementById("butterfly").style.animationPlayState = "running";
   document.getElementById("frame-1").style.animationPlayState = "running";
   document.getElementById("frame-2").style.animationPlayState = "running";
   document.getElementById("grass").style.animationPlayState = "running";
   document.getElementById("grass2").style.animationPlayState = "running";
-  document.getElementById("enter-button").style.display = "none";
-  setTimeout(pageStart, 1000);
-}
-
-function pageStart() {
   sessionStorage.setItem("visited", "yes")
   document.getElementById("front-page").style.display = "none";
+}
+
+function loadContent(){
+  document.getElementById("forest-image").style.display = "block";
+  document.getElementById("content").style.display = "block";
+  document.getElementById("wrapper").style.backgroundColor = "white";
 }
 // end of front page code
 
@@ -310,6 +233,7 @@ function mainToMyWork() {
 
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   pagePosition = "MyWork";
+  document.getElementById("front-page-main-heading").style.display = "none";
   document.getElementById("main-header").style.zIndex = "-10";
   document.getElementById("nav").style.border = "none";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
@@ -319,6 +243,7 @@ function mainToMyWork() {
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("tree-bark").style.display = "none";
   document.getElementById("nav-mywork").style.color = "yellow";
+  document.getElementById("wrapper").style.backgroundColor = "#B4FAFF";
   // document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById("portfolio").style.display = "block";
   document.getElementById("portfolio").style.animation = "fadeIn 2s linear 2s forwards";
@@ -382,6 +307,7 @@ function mainToMyWork() {
 function mainToAboutMe() {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   pagePosition = "AboutMe";
+  document.getElementById("front-page-main-heading").style.display = "none";
   document.getElementById("main-header").style.zIndex = "-10";
   document.getElementById("butterfly").style.display = "none";
   document.getElementById("grass3").style.animation = "fadeOut .5s linear forwards";
@@ -457,6 +383,7 @@ function mainToAboutMe() {
 function mainToContact() {
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   pagePosition = "Contact";
+  document.getElementById("front-page-main-heading").style.display = "none";
   document.getElementById("main-header").style.zIndex = "-10";
   document.getElementById("butterfly").style.display = "none";
   document.getElementById("grass3").style.visibility = "hidden";
@@ -720,6 +647,7 @@ function contactToMyWork() {
   document.getElementById("nav-mywork").style.color = "yellow";
   document.getElementById("forest-image").style.animation = "forestContactToMyWork 1s linear forwards";
   document.getElementById("contact").style.display = "none";
+  document.getElementById("wrapper").style.backgroundColor = "#B4FAFF";
   document.getElementById("portfolio-header").style.animation = "fadeIn 2s linear 2s forwards";
   document.getElementById("cloud1").style.animation = "floatRight1 120s linear 1s forwards";
   document.getElementById("cloud2").style.animation = "floatRight1 220s linear 1s forwards";

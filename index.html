@@ -10,29 +10,41 @@
 
   <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Nunito+Sans" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Nanum+Gothic|Nunito|Oxygen|Poppins|Quicksand|Titillium+Web|Ubuntu|Work+Sans"
+  <link
+    href="https://fonts.googleapis.com/css?family=Dosis|Inconsolata|Nanum+Gothic|Nunito|Oxygen|Poppins|Quicksand|Titillium+Web|Ubuntu|Work+Sans"
     rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <title>Nicholas Alex Portfolio</title>
 </head>
 
 <body onresize="resize()">
 
   <div id="wrapper">
-      <div id="front-page">
+    <div id="front-page">
+      <div id="front-page-content">
         <div id="content-here">
         </div>
+        <div id="run-button"><button id="run-btn" onclick=runButton()>RUN!</button></div>
         <div id="content-here2">
           <h1>Hello! My name is Nicholas Alex</h1>
           <p>I am a Full Stack Web Developer</p>
           <button id="enter-button" onclick=enterSite()>Enter</button>
+          <!-- <p id="content-hidden-text">(fast internet connection recommended)</p> -->
         </div>
-        <div id="run-button"><button id="run-btn" onclick=runButton()>RUN!</button></div>
+   
+        
+      </div>
+    
+    </div>
+    <div id="front-page-main-heading">
+        <div id="bottom-border"></div>
+        <h1 id="heading-first">Nicholas Alex</h1>
+        <p id="paragraph-first">Full Stack Web Developer</p>
       </div>
     <div id="forest-image">
 
     </div>
-    <div class="content">
+    <div id="content">
 
 
       <div id="main-header">
@@ -87,10 +99,12 @@
 
 
       <div id="portfolio">
-          <div id="portfolio-header">
-              <a href="index.html"> <h1>My work</h1></a>
+        <div id="portfolio-header">
+          <a href="index.html">
+            <h1>My work</h1>
+          </a>
         </div>
-      
+
         <div class="project-card first-card">
           <a target="_blank" href="https://immense-eyrie-37039.herokuapp.com/">
 
@@ -150,70 +164,83 @@
       </div>
 
       <div id="about-me">
-        
+
         <div id="about-me-header">
-            <a href="index.html"><h1>About me</h1></a>
+          <a href="index.html">
+            <h1>About me</h1>
+          </a>
         </div>
         <div id="about-me-contents">
-        <div id="about-me-profile-pic">
-          <img src="assets/images/portrait4.2.jpg" />
-        </div>
-        
-        <div id="about-me-window">
-          <div id="about-me-inner-window">
-            <p>
-              When I was a child growing up in a small town, I had a passion for creating things. Whether it was palmetto forts in the
-              backyard, a home movie about Furbies trying to take over the house, or a comic book about Garfield finally
-              leaving Jon and joining a ragtag team of misfit cats who liked harassing dogs at dog parks, I felt I needed
-              to find ways to entertain myself in my otherwise boring town. Today I still have that passion. While it doesn’t
-              involve the Furby toy by Tiger Electronics or Garfield the cat, I like to create things when I can such as
-              music, screenplays, cross-stitches, bread, movies, and much more.
+          <div id="about-me-profile-pic">
+            <img src="assets/images/portrait4.2.jpg" />
+          </div>
 
-            </p>
-            Since graduating from UCF with a film degree in 2012, I’ve had a few odd jobs not related to film. Most of them were mind-numbing
-            work with little to no creativity. I knew I wanted a job with a mix of hands-on technical stuff and creativity,
-            so when I spoke with my friend who was in the web development field, I ran home and started teaching myself HTML
-            and CSS. Two weeks later, I finally took a break to eat and shower and now I think I know what I want to do for
-            a living.
-            <p>
-              My name is Nick, and I currently live in the Orlando area with my girlfriend Jen and our pug Simon. I recently finished a
-              Full Stack coding bootcamp at UCF, and I'm currently looking for employement to become a Front End or Full
-              Stack Web Developer. I am excited to continue to learn and grow in this industry.
+          <div id="about-me-window">
+            <div id="about-me-inner-window">
+              <p>
+                When I was a child growing up in a small town, I had a passion for creating things. Whether it was
+                palmetto forts in the
+                backyard, a home movie about Furbies trying to take over the house, or a comic book about Garfield
+                finally
+                leaving Jon and joining a ragtag team of misfit cats who liked harassing dogs at dog parks, I felt I
+                needed
+                to find ways to entertain myself in my otherwise boring town. Today I still have that passion. While it
+                doesn’t
+                involve the Furby toy by Tiger Electronics or Garfield the cat, I like to create things when I can such
+                as
+                music, screenplays, cross-stitches, bread, movies, and much more.
 
-            </p>
+              </p>
+              Since graduating from UCF with a film degree in 2012, I’ve had a few odd jobs not related to film. Most of
+              them were mind-numbing
+              work with little to no creativity. I knew I wanted a job with a mix of hands-on technical stuff and
+              creativity,
+              so when I spoke with my friend who was in the web development field, I ran home and started teaching
+              myself HTML
+              and CSS. Two weeks later, I finally took a break to eat and shower and now I think I know what I want to
+              do for
+              a living.
+              <p>
+                My name is Nick, and I currently live in the Orlando area with my girlfriend Jen and our pug Simon. I
+                recently finished a
+                Full Stack coding bootcamp at UCF, and I'm currently looking for employement to become a Front End or
+                Full
+                Stack Web Developer. I am excited to continue to learn and grow in this industry.
+
+              </p>
+
+            </div>
 
           </div>
 
-        </div>
-
-        <div id="skills-outer-window">
-          <div id="skills">
-            <div id="skills-header">
-              <h2>Technical Skills</h2>
-            </div>
-            <div id="skills-list">
-              <div class="box box-1">HTML</div>
-              <div class="box box-2">CSS</div>
-              <div class="box box-3">JavaScript</div>
-              <div class="box box-4">Node.js</div>
-              <div class="box box-5">Express</div>
-              <div class="box box-6">jQuery</div>
-              <div class="box box-7">Bootstrap</div>
-              <div class="box box-8">React.js</div>
-              <div class="box box-9">MongoDB</div>
-              <div class="box box-10">MySQL</div>
-              <div class="box box-11">APIs</div>
-              <div class="box box-12">JSON</div>
-              <div class="box box-13">REST</div>
-              <div class="box box-14">AJAX</div>
-              <div class="box box-15">PHP</div>
-              <div class="box box-16">Firebase</div>
-              <div class="box box-17">Github</div>
-              <div class="box box-18">GIT</div>
+          <div id="skills-outer-window">
+            <div id="skills">
+              <div id="skills-header">
+                <h2>Technical Skills</h2>
+              </div>
+              <div id="skills-list">
+                <div class="box box-1">HTML</div>
+                <div class="box box-2">CSS</div>
+                <div class="box box-3">JavaScript</div>
+                <div class="box box-4">Node.js</div>
+                <div class="box box-5">Express</div>
+                <div class="box box-6">jQuery</div>
+                <div class="box box-7">Bootstrap</div>
+                <div class="box box-8">React.js</div>
+                <div class="box box-9">MongoDB</div>
+                <div class="box box-10">MySQL</div>
+                <div class="box box-11">APIs</div>
+                <div class="box box-12">JSON</div>
+                <div class="box box-13">REST</div>
+                <div class="box box-14">AJAX</div>
+                <div class="box box-15">PHP</div>
+                <div class="box box-16">Firebase</div>
+                <div class="box box-17">Github</div>
+                <div class="box box-18">GIT</div>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="find-me">
+          <div id="find-me">
             <div class="findme-card" id="findme-card-1">
               <a href="#">
                 <img id="codepen" src="assets/images/code-pen-logo.png" />
@@ -221,19 +248,19 @@
               </a>
               <p>Check out my Codepen!</p>
             </div>
-    
+
             <div class="findme-card" id="findme-card-2">
               <a href="#">
                 <img id="github" src="assets/images/Octocat.png" />
               </a>
               <p>Check out my GitHub!</p>
             </div>
-    
+
           </div>
         </div>
       </div>
 
-  
+
 
 
       <div id="lots-o-clouds">
@@ -243,7 +270,9 @@
       </div>
       <div id="contact">
         <div id="contact-header">
-          <a href="index.html"><h1>Contact</h1></a>
+          <a href="index.html">
+            <h1>Contact</h1>
+          </a>
         </div>
         <div class="contact-card" id="contact-card-1">
           <a href="#">
@@ -259,12 +288,12 @@
           <div class="contact-card" id="contact-card-3">
             <img id="envelope" src="assets/images/envelope.png" />
         </a>
-        </div>
-
-
-
       </div>
+
+
+
     </div>
+  </div>
   </div>
 </body>
 <script src="assets/javascript/app.js"></script>
