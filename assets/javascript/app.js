@@ -123,16 +123,14 @@ var isElement = false;
 var typing;
 var completedHeading = false;
 var completedParagraph = false;
-var d = new Date();
-var currentDate = d.getTime();
-sessionStorage.setItem("visited", "");
+
 
 frontPage(); 
 
 function frontPage(){
   var website= sessionStorage.getItem("visited");
   console.log(website)
-  if(website === ""){
+  if(website === null){
     document.getElementById("front-page").style.display = "block";
     typing = setInterval(checkItem, 60);
   }
