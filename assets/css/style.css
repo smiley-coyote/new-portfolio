@@ -13,7 +13,6 @@ body a {
   margin: 0 auto;
   width: 1290px;
   height: 800px;
-  overflow: scroll;
   /* background-color: white; */
  
   
@@ -28,7 +27,7 @@ body a {
   font-family: 'Nanum Gothic', sans-serif;
   font-family: 'Inconsolata', monospace; */
   font-family: 'Oxygen', sans-serif;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 #front-page {
@@ -216,7 +215,7 @@ body a {
   
   color: #000;
   background-clip: text;
-  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
@@ -1583,10 +1582,11 @@ z-index: 1;
 /* for screen size less than 500 */
 @keyframes treeMainToMyWork5 {
   0%{
-    transform: translate(-1825px, -2000px) scale(1.2);
+    transform: translate(-350px, -490px) scale(5.1);
+    filter: blur(1px);
   }
   100%{
-    transform: translate(-2225px, -1930px) scale(.22);
+    transform: translate(-310px, -30px) scale(.9);
     filter: blur(0px);
   }
 }
@@ -2448,7 +2448,8 @@ z-index: 1;
 }
 
   #tree {
-    transform: translate(-1825px, -2000px) scale(1.2);
+    transform: translate(-350px, -490px) scale(5.1);
+    filter: blur(1px);
   }
 
   #nav {
