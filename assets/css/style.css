@@ -13,6 +13,7 @@ body a {
   margin: 0 auto;
   width: 1290px;
   height: 800px;
+  overflow: scroll;
   /* background-color: white; */
  
   
@@ -27,7 +28,7 @@ body a {
   font-family: 'Nanum Gothic', sans-serif;
   font-family: 'Inconsolata', monospace; */
   font-family: 'Oxygen', sans-serif;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #front-page {
@@ -44,7 +45,7 @@ body a {
 
 #front-page-content {
   position: relative;
-  width: 60%;
+  width: 960px;
   height: 400px;
   margin: 50px auto;
 }
@@ -203,7 +204,7 @@ body a {
   bottom: 200px;
   float: right;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  
 }
 
 #run-btn{
@@ -1155,12 +1156,12 @@ z-index: 1;
 
 #tree {
   position: absolute;
-  transform: translate(-670px, -1850px) scale(2);
+  transform: translate(450px, -600px) scale(8);
  
   /* transform: translate(-2300px, -1700px) scale(.340); */
 
   /* transform: translate(-2200px, -2400px) scale(.5); */
-  filter: blur(8px);
+  filter: blur(3px);
 }
 
 #tree-bark {
@@ -1186,20 +1187,18 @@ z-index: 1;
 /* For screens greater than 1250  */
 @keyframes treeMainToMyWork {
   0%{
-    /* transform: translate(-1300px, -1850px) scale(2); */
-    transform: translate(-670px, -1850px) scale(2);
+
+    transform: translate(450px, -600px) scale(8);
   }
   100%{
-    /* transform: translate(-2300px, -1700px) scale(.305); */
-    /* transform: translate(-46%, -34%) scale(.305); */
-    transform: translate(-1720px, -1830px) scale(.305);
+    transform: translate(150px, 0px) scale(1.2);
     filter: blur(0px);
   }
 }
 
 @keyframes treeMainToAboutMe {
   0%{
-    transform: translate(-670px, -1850px) scale(2);
+    transform: translate(450px, -600px) scale(8);
   }
 
   100%{
@@ -1209,7 +1208,7 @@ z-index: 1;
 
 @keyframes treeMainToContact {
   0%{
-    transform: translate(-670px, -1850px) scale(2);
+    transform: translate(450px, -600px) scale(8);
   }
 
   100%{
@@ -1220,7 +1219,7 @@ z-index: 1;
 
 @keyframes treeMyWorkToAboutMe {
   0%{
-    transform: translate(-1720px, -1830px) scale(.305);
+    transform: translate(150px, 0px) scale(1.2);
     filter: blur(0px);
   }
   100%{
@@ -1231,7 +1230,7 @@ z-index: 1;
 
 @keyframes treeMyWorkToContact {
   0%{
-    transform: translate(-1720px, -1830px) scale(.305);
+    transform: translate(150px, 0px) scale(1.2);
     filter: blur(0px);
   }
   100%{
