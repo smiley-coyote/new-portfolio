@@ -243,7 +243,7 @@ function mainToMyWork() {
   document.getElementById("forest-image").style.animation = "fadeOut 1s linear forwards";
   document.getElementById("tree-bark").style.display = "none";
   document.getElementById("nav-mywork").style.color = "yellow";
-  document.getElementById("wrapper").style.backgroundColor = "#B4FAFF";
+  document.getElementById("wrapper").style.backgroundColor = "#B1F2F2";
   // document.getElementById ("nav").style.animation = "fadeOut .5s ease-in-out forwards";
   document.getElementById("portfolio").style.display = "block";
   document.getElementById("portfolio").style.animation = "fadeIn 2s linear 2s forwards";

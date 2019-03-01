@@ -203,41 +203,33 @@ body a {
   bottom: 200px;
   float: right;
   border-radius: 5px;
-  
+  color: white;
 }
 
 #run-btn{
   text-align: center;
   
-  background: linear-gradient(to right, rgb(255, 53, 53) 12.5%, rgb(255, 135, 54) 25%, rgb(255, 242, 53) 37.5%, rgb(104, 255, 104) 50%,
+  /* background: linear-gradient(to right, rgb(255, 53, 53) 12.5%, rgb(255, 135, 54) 25%, rgb(255, 242, 53) 37.5%, rgb(104, 255, 104) 50%,
   rgb(54, 248, 248) 62.5%, rgb(97, 121, 255) 75%, rgb(250, 96, 255) 87.5%, rgb(255, 78, 211) 100%);
-  background-size: 200% auto;
+  background-size: 200% auto; */
   
-  color: #000;
-  background-clip: text;
+  
+  /* background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  animation: shine 4s linear reverse infinite;
+  animation: shine 4s linear reverse infinite; */
 
 }
 
-@keyframes shine {
+/* @keyframes shine {
   to {
     background-position: 200% center;
   }
-}
+} */
 
 
-@-webkit-keyframes hue {
-  from {
-    -webkit-filter: hue-rotate(0deg);
-  }
-  to {
-    -webkit-filter: hue-rotate(-360deg);
-  }
-}
 
 
 #run-button button {
@@ -397,13 +389,13 @@ visibility: hidden;
     background-color: #B4FAFF;
   }
   100%{
-    background-color: rgb(97, 243, 253);
+    background-color: #58C3FF;
   }
 }
 
 @keyframes toLighterBlue {
   0%{
-    background-color: rgb(97, 243, 253);
+    background-color: #58C3FF;
   }
   100%{
     background-color: #B4FAFF;
