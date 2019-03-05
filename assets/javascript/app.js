@@ -1,9 +1,5 @@
-var pagePosition = "Main";
-var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-var originalWidth = 0;
-var screenSizeCheck = false;
 
-
+$(document).ready(function(){
 // front page code
 var str1 = "<h1>Hello! My name is Nicholas Alex</h1>";
 var str2 = "<p>I am a Full Stack Web Developer!</p>";
@@ -16,20 +12,21 @@ var completedHeading = false;
 var completedParagraph = false;
 
 
-frontPage(); 
+frontPage();
 
 function frontPage(){
   var building = "go"
   var website= sessionStorage.getItem("visited");
-  console.log(website)
   // if(website === null)
   // if(building === "go")
   if(website === null){
+    console.log("typing");
     document.getElementById("front-page").style.display = "block";
-    typing = setInterval(checkItem, 60);
-    var loadPage = setTimeout(loadContent, 100)
+    setTimeout(typer, 500);
+    setTimeout(loadContent, 100)
   }
   else {
+    document.getElementById("content").style.visibility = "visible";
     document.getElementById("main-header").style.visibility = "visible";
     document.getElementById("forest-image").style.display = "block";
     document.getElementById("content").style.display = "block";
@@ -40,6 +37,12 @@ function frontPage(){
     document.getElementById("grass").style.animationPlayState = "running";
     document.getElementById("grass2").style.animationPlayState = "running";
   }
+}
+
+function typer(){
+  
+  document.getElementById("content-here").innerHTML = "";
+ typing = setInterval(checkItem, 60);
 }
 
 function checkItem() {
@@ -58,7 +61,6 @@ function checkItem() {
     }
   } else {
     if (completedHeading === false && completedParagraph === false) {
-      console.log("completed")
       clearInterval(typing);
       $("#content-here").append("<br>");
       newArr = str2.split("");
@@ -67,7 +69,6 @@ function checkItem() {
       completedHeading = true;
     } 
     else if(completedHeading === true && completedParagraph === false){
-      console.log("completed2")
       clearInterval(typing);
       $("#content-here").append("<br>");
       newArr = str3.split("");
@@ -77,7 +78,6 @@ function checkItem() {
     }
     
     else {
-      console.log("completed3")
       clearInterval(typing);
       document.getElementById("run-button").style.display = "block";
     }
@@ -96,6 +96,15 @@ function myFunction2() {
 
 }
 
+
+function loadContent(){
+  document.getElementById("forest-image").style.display = "block";
+  document.getElementById("content").style.display = "block";
+  document.getElementById("wrapper").style.backgroundColor = "white";
+}
+// end of front page code
+});
+
 function runButton(){
   document.getElementById("run-button").style.display = "none";
   document.getElementById("content-here").style.display = "none";
@@ -106,12 +115,18 @@ function enterSite() {
   var screenWidth = window.innerWidth || document.documentElement.clientWidth;
   if(screenWidth > 700){
   document.getElementById("content-here").style.display = "none";
-  document.getElementById("content-here2").style.display = "none";
+  // document.getElementById("content-here2").style.display = "none";
+  document.getElementById("content").style.visibility = "visible";
+  document.getElementById("content-here2").style.animationPlayState = "running";
+  document.getElementById("heading-gone").style.visibility = "hidden";
+  document.getElementById("paragraph-gone").style.visibility = "hidden";
   document.getElementById("enter-button").style.display = "none";
-  document.getElementById("front-page-main-heading").style.display = "block";
-  document.getElementById("front-page-main-heading").style.animationPlayState = "running";
-  document.getElementById("heading-first").style.animationPlayState = "running";
-  document.getElementById("paragraph-first").style.animationPlayState = "running";
+  document.getElementById("content-here-header").style.animationPlayState = "running";
+  document.getElementById("content-here-par").style.animationPlayState = "running";
+  // document.getElementById("front-page-main-heading").style.display = "block";
+  // document.getElementById("front-page-main-heading").style.animationPlayState = "running";
+  // document.getElementById("heading-first").style.animationPlayState = "running";
+  // document.getElementById("paragraph-first").style.animationPlayState = "running";
   document.getElementById("bottom-border").style.animationPlayState = "running";
   document.getElementById("front-page").style.animation = "fadeOut 1s linear 2s forwards";
   setTimeout(pageStart, 2500);
@@ -127,7 +142,7 @@ function enterSite() {
 }
 
 function pageStart() {
-  document.getElementById("front-page-main-heading").style.animation = "turnToBlack .5s linear forwards";
+  document.getElementById("content-here2").style.animation = "turnToBlack .5s linear forwards";
   document.getElementById("butterfly").style.animationPlayState = "running";
   document.getElementById("frame-1").style.animationPlayState = "running";
   document.getElementById("frame-2").style.animationPlayState = "running";
@@ -137,12 +152,13 @@ function pageStart() {
   document.getElementById("front-page").style.display = "none";
 }
 
-function loadContent(){
-  document.getElementById("forest-image").style.display = "block";
-  document.getElementById("content").style.display = "block";
-  document.getElementById("wrapper").style.backgroundColor = "white";
-}
-// end of front page code
+var pagePosition = "Main";
+var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+var originalWidth = 0;
+var screenSizeCheck = false;
+
+
+
 
 checkScreenSize();
 
@@ -233,7 +249,7 @@ function mainToMyWork() {
 
   viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   pagePosition = "MyWork";
-  document.getElementById("front-page-main-heading").style.display = "none";
+  document.getElementById("content-here2").style.display = "none";
   document.getElementById("main-header").style.zIndex = "-10";
   document.getElementById("nav").style.border = "none";
   document.getElementById("main-header").style.animation = "fadeOut .3s linear forwards";
@@ -322,7 +338,7 @@ function mainToAboutMe() {
   document.getElementById("find-me").style.display = "block";
   document.getElementById("findme-card-1").style.animation = "PlopIn .5s linear 4.7s forwards";
   document.getElementById("findme-card-2").style.animation = "PlopIn .5s linear 4.8s forwards";
-  document.getElementById("wrapper").style.animation = "toSkyBlue 2s linear 2s forwards";
+  document.getElementById("wrapper").style.animation = "toSkyBlue 4s linear forwards";
   document.getElementById("clouds-layer1").style.animation = "allcloudsmovedown 2s linear 1.5s forwards";
   document.getElementById("clouds-layer2").style.animation = "allcloudsmovedown 3s linear 1.5s forwards";
   document.getElementById("clouds-layer3").style.animation = "allcloudsmovedown 4s linear 1.5s forwards";
@@ -341,7 +357,7 @@ function mainToAboutMe() {
       ele[i].style.animation = "paddingChange 1.5s forwards";
     }
     document.getElementById("nav").style.animation = "navShrink 1s ease-in-out forwards";
-    document.getElementById("tree").style.animation = "treeMainToAboutMe 3.5s ease-out normal forwards";
+    document.getElementById("tree").style.animation = "treeMainToAboutMe 1.5s linear normal forwards";
   }
   if (viewportWidth <= 1250 && viewportWidth > 1060) {
     for (var i = 0; i < ele.length; i++) {
