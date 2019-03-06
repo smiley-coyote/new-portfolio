@@ -12,6 +12,30 @@ var completedHeading = false;
 var completedParagraph = false;
 
 
+
+// var flashNumber = 10;
+// var flashOn = false;
+// var flashing = setInterval(flash, 500);
+// function flash(){
+//   if(flashNumber > 0 && flashOn === false){
+//     console.log(flashOn + " " + flashNumber);
+//     document.getElementById("content-here").innerHTML = "|"
+//     flashNumber --;
+//     flashOn = true;
+//   }
+//   if(flashNumber > 0 && flashOn === true){
+//     console.log(flashOn + " " + flashNumber);
+//     document.getElementById("content-here").innerHTML = "";
+//     flashNumber --;
+//     flashOn = false;
+//   }
+//   else {
+//     document.getElementById("content-here").innerHTML = "";
+//     clearInterval(flashing);
+    
+//   }
+// }
+
 frontPage();
 
 function frontPage(){
@@ -23,7 +47,7 @@ function frontPage(){
     console.log("typing");
     document.getElementById("front-page").style.display = "block";
     setTimeout(typer, 500);
-    setTimeout(loadContent, 100)
+    
   }
   else {
     document.getElementById("content").style.visibility = "visible";
@@ -79,7 +103,7 @@ function checkItem() {
     
     else {
       clearInterval(typing);
-      document.getElementById("run-button").style.display = "block";
+      setTimeout(loadContent, 1000);
     }
 
   }
@@ -98,6 +122,7 @@ function myFunction2() {
 
 
 function loadContent(){
+  document.getElementById("run-button").style.display = "block";
   document.getElementById("forest-image").style.display = "block";
   document.getElementById("content").style.display = "block";
   document.getElementById("wrapper").style.backgroundColor = "white";
@@ -424,7 +449,7 @@ function mainToContact() {
     for (var i = 0; i < ele.length; i++) {
       ele[i].style.animation = "paddingChange 1.5s forwards";
     }
-    document.getElementById("nav").style.animation = "navShrinkContacts 2s ease-in-out forwards";
+    document.getElementById("nav").style.animation = "navShrinkContacts1 2s ease-in-out forwards";
     document.getElementById("tree").style.animation = "treeMainToContact 2s ease-out normal forwards";
     document.getElementById("nav-list").style.animation = "shrinkHeight .5s ease-in-out forwards";
     document.getElementById("forest-ground").style.animation = "groundUp 2s ease-out normal forwards";
@@ -616,7 +641,7 @@ function contactToAboutMe() {
   document.getElementById("cloud5").style.animation = "floatRight1 200s linear 3s forwards";
   document.getElementById("about-me").style.display = "block";
   document.getElementById("about-me").style.animation = "fadeIn 2s linear 3s forwards";
-  document.getElementById("wrapper").style.animation = "toSkyBlue 2s linear 2s forwards";
+  document.getElementById("wrapper").style.animation = "toSkyBlue 4s linear forwards";
 
   if (viewportWidth > 1250) {
 

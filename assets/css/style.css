@@ -664,7 +664,20 @@ visibility: hidden;
   }
 }
 
+@keyframes navShrinkContacts1 {
+  55% {
+    border-left: 0px;
+  }
+  100%{
+    transform: scale(.55) translate(-420px, -80px);
+    color: black;
+  }
+}
+
 @keyframes navShrinkContacts {
+  0%{
+    transform: scale(.5) translate(200px, -200px);
+  }
   55% {
     border-left: 0px;
   }
@@ -675,6 +688,9 @@ visibility: hidden;
 }
 
 @keyframes navShrinkContacts2 {
+  0%{
+    transform: scale(.5) translate(200px, -200px);
+  }
 
   100%{
     transform: scale(.55) translate(-420px, -80px);
@@ -1238,7 +1254,7 @@ z-index: 1;
     filter: blur(0px);
   }
   100%{
-    transform: translate(-1600px, 1700px) scale(.305);
+    transform: translate(150px, 2000px) scale(1.2);
     filter: blur(0px);
   }
 }
@@ -1256,44 +1272,44 @@ z-index: 1;
 
 @keyframes treeContactToAboutMe {
   0%{
-    transform: translate(-1650px, -2500px) scale(.5);
+    transform: translate(100px, -730px) scale(2);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-1650px, -1000px) scale(.305);
+    transform: translate(100px, 1500px) scale(2);
     filter: blur(0px);
   }
 }
 
 @keyframes treeContactToMyWork {
   0%{
-    transform: translate(-1650px, -2500px) scale(.5);
+    transform: translate(100px, -730px) scale(2);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-1720px, -1830px) scale(.305);
+    transform: translate(150px, 0px) scale(1.2);
     filter: blur(0px);
   }
 }
 
 @keyframes treeAboutMeToMyWork {
   0%{
-    transform: translate(-1720px, 1000px) scale(.305);
+    transform: translate(150px, 2000px) scale(1.2);
     filter: blur(0px);
   }
   100% {
-    transform: translate(-1720px, -1830px) scale(.305);
+    transform: translate(150px, 0px) scale(1.2);
     filter: blur(0px);
   }
 }
 
 @keyframes treeAboutMeToContacts {
   0%{
-    transform: translate(-1650px, 3000px) scale(.305);
+    transform: translate(100px, 4500px) scale(2);
     filter: blur(0px);
   }
   100%{
-    transform: translate(-1650px, -2500px) scale(.5);
+    transform: translate(100px, -730px) scale(2);
     filter: blur(0px);
   }
 }
@@ -2293,7 +2309,7 @@ z-index: 1;
 
 #tree-bark {
   width: 535px;
-  transform: translateX(-310px);
+  transform: translateX(-30px);
 }
 
 #butterfly img {
